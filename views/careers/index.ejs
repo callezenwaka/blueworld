@@ -1,6 +1,6 @@
 <% include ../partials/header %>
-<div class="career_page">
-    <h1 class="page_text_align">Latest Jobs</h1><hr>
+<div class="career_page desktop_view">
+    <h1 class="page_text_align">Latest Jobs</h1><hr class="page_hr">
     <% careers.forEach(function(career, index){ %>
         <div class="page_content">
             <div class="<%= index%2 === 0 ? 'page_content_index_even' : 'page_content_index_odd' %>">

@@ -82,24 +82,27 @@ hr.page_hr{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "svg_container";
-    max-width: 1020px;
-    margin: 0 15px;
+    min-width: 100%;
+    margin: 0;
 }
 .svg_container {
     grid-area: page_container;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 5px;
+    /* grid-gap: 5px; */
+    grid-row-gap: 0;
+    grid-column-gap: 5px;
+    margin: 0 10px;
     grid-template-areas: "svg_card" "svg_card";
 }
 .svg_card {
     width: 100%;
     height: auto;
     padding: 5px; 
-    margin: 5px 5px 5px 0; 
+    margin: 10px 5px 10px 0; 
     text-align: center; 
-    /* background-color: #E0E0E0; */
+    background-color: #E0E0E0;
     box-shadow: 10px 10px 5px grey;
 }
 .svg_card:last-child {
@@ -126,8 +129,9 @@ hr.page_hr{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "page_container";
-    max-width: 1020px;
-    margin: 0 15px;
+    background-color: #E0E0E0;
+    min-width: 100%;
+    margin: 0;
 }
 .page_container {
     grid-area: page_container;
@@ -135,6 +139,7 @@ hr.page_hr{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 5px;
+    margin: 5px 10px;
     grid-template-areas: "page_card" "page_card";
 }
 .page_card {
