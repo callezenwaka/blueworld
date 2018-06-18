@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+<div class="page_create">
+    <div class="page_content">
+        <h1 class="page_text_align">Post New Job</h1>
+        <div class="row"></div>
+            <form action="/admin/careers" method="POST" novalidate="novalidate">
+                <div class="col-sm-6">
+                    <div class="form-field">
+                        <label for="title">Job Title <span class="page_form_input_required">*</span></label>
+                        <input type="text" name="career[title]" value="" placeholder="Enter job title" class="page_form_input" id="title" aria-required="true" aria-invalid="false" />
+                    </div>
+                    <br>
+                    <div class="form-field">
+                        <label for="description">Job Description <span class="page_form_input_required">*</span></label>
+                        <textarea name="career[description]" placeholder="Enter job description" cols="40" rows="10" class="page_form_input" id="description" aria-required="true" aria-invalid="false"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-field">
+                        <label for="requirement">Requirement  <span class="page_form_input_required">*</span></label>
+                        <textarea name="career[requirement]" placeholder="Enter job requirement" cols="40" rows="10" class="page_form_input" id="requirement" aria-required="true" aria-invalid="false"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-field">
+                        <label for="eligibility">Eligibility  <span class="page_form_input_required">*</span></label>
+                        <textarea name="career[eligibility]" placeholder="Enter job eligibility" cols="40" rows="10" class="page_form_input" id="eligibility" aria-required="true" aria-invalid="false"></textarea>
+                    </div>
+                    <br>
+                    <div class="">
+                        <button>Create Job</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+<% include ../partials/footer %>

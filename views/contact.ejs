@@ -1,0 +1,72 @@
+<% include ./partials/header %>
+<div class="contact_page">
+    <h1 class="page_text_align">Contact</h1>
+    <div class="page_content page_text_align">
+        <h2>Where you can find us</h2><hr class="page_hr">
+        <ul class="contact_page_contents">
+            <li>
+                <div>
+                    <p><a class="contact_page_link" href=""><span><i style="color: chartreuse" class="fa fa-phone"></i></span> <strong> +234 (802) 678 8479</strong></a></p>
+                    <p><a class="contact_page_link" href="admin@blueworldcosmetics.com"><span><i class="contact_social_media_color fa fa-envelope"></i></span> admin@blueworldcosmetics.com</a></p>
+                    <p><a class="contact_page_link" href="sales@blueworldcosmetics.com"><span><i class="contact_social_media_color fa fa-envelope"></i></span> sales@blueworldcosmetics.com</a></p>
+                    <p><a class="contact_page_link" href="blueworldcosmeticts@gmail.com"><span><i class="contact_social_media_color fa fa-envelope"></i></span> blueworldcosmeticts@gmail.com</a></p>
+                </div><br>
+            </li>
+            <li>
+                <div>
+                    <h3 title="Head Office"><i style="color: crimson" class="fa fa-map-marker"></i><strong>  BLUEWORLD COSMETICS</strong></h3>
+                    <p>Ogun Plaza,<br>
+                    International center for commerce,<br />
+                    Ojo Local Government,<br />
+                    Lagos State, Nigeria</p>
+                </div>
+                <div class="page_text_align social_media">
+                    <a href="https://facebook.com/blueworldcosmeticsltd"><span> <i title="Facebook" class="contact_social_media_color fab fa-facebook-square"></i></span></a>
+                    <a href="https://twitter.com/blueworldcosmeticsltd"><span> <i title="Twitter" class="contact_social_media_color fab fa-twitter-square"></i></span></a>
+                    <a href="https://instagram.com/blueworldcosmeticsltd"><span> <i title="Instagram" class="contact_social_media_color fab fa-instagram"></i></span></a>
+                    <a href="https://google-plus.com/blueworldcosmeticsltd"><i title="Google+" class="contact_social_media_color fab fa-google-plus-square"></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="page_content">
+        <div class="">
+            <h2 class="page_text_align">Send a message</h2><hr class="page_hr">
+        </div>
+        <div class="row"></div>
+            <form action="#" method="post" novalidate="novalidate">
+                <div class="contact_page_form">
+                    <div class="form-field">
+                        <label for="full_name">Full Name: <span class="page_form_input_required">*</span></label>
+                        <input type="text" name="contact[full_name]" value="" class="page_form_input" id="full_name" placeholder="Enter your full name"  aria-required="true" aria-invalid="false" />
+                    </div>
+                    <br>
+                    <div class="form-field">
+                        <label for="email">Email:  <span class="page_form_input_required">*</span></label>
+                        <input type="email" name="contact[email]" value="" class="page_form_input" id="email" placeholder="Enter your email" aria-required="true" aria-invalid="false" />
+                    </div>
+                    <br>
+                    <div class="form-field">
+                        <label for="phone_number">Phone Number: <span class="page_form_input_required">*</span></label>
+                        <input type="number" name="contact[phone_number]" value="" class="page_form_input" id="phone_number" placeholder="Enter your phone number" aria-invalid="false" />
+                    </div>
+                    <br>
+                    <div class="form-field">
+                        <label for="title">Title: <span class="page_form_input_required">*</span></label>
+                        <input type="text" name="contact[title]" value="" class="page_form_input" id="title" placeholder="Enter the message title" aria-invalid="false" />
+                    </div>
+                    <br>
+                    <div class="form-field">
+                        <label for="message">Message:  <span class="page_form_input_required">*</span></label>
+                        <textarea name="contact[message]" cols="40" rows="10" class="page_form_textarea" id="message" aria-required="true" aria-invalid="false"></textarea>
+                    </div>
+                    <br>
+                    <div class="wrap">
+                        <button class="button">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include ./partials/footer %>

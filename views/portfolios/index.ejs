@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<div class="portfolio_page">
+    <h1 class="page_text_align">Management Team</h1><hr class="page_hr">
+    <% portfolios.forEach(function(portfolio){ %>
+            <div class="page_list" style="background-color: #E0E0E0;border-radius: 10px;">
+                <div class="thumbnail_container">
+                    <img class="thumbnail" src="<%= portfolio.image %>">
+                </div>
+                <div class="thumbnail_container">
+                    <h3><strong><%=portfolio.first_name%> <%=portfolio.last_name%></strong>, <%=portfolio.position%></h3><hr>
+                    <p><strong>Email: </strong><%=portfolio.email%></p>
+                    <p><strong>Phone Number: </strong><%=portfolio.phone_number%></p>
+                    <p><strong>Profile: </strong><%=portfolio.profile %></p>
+                </div>
+            </div><hr class="page_hr1">
+    <% }); %>
+</div>
+<% include ../partials/footer %>

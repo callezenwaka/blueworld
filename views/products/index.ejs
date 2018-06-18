@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<div class="product_page">
+    <h1 class="page_text_align">Our Products</h1><hr class="page_hr">
+    <% products.forEach(function(product){ %>
+        <div class="page_list" style="background-color: #E0E0E0;border-radius: 10px; margin: 4px 0 12px 0">
+            <div class="thumbnail_container">
+                <img class="thumbnail" src="<%= product.image %>">
+            </div>
+            <div class="thumbnail_container">
+                <h3 class="product_content_heading"><%=product.name%></h3><hr>
+                <p><strong>Price: </strong>$ <%= product.price %> / Carton</p>
+                <p><strong>Description: </strong><%=product.description %></p>
+                <a class="button" href="/products/<%= product._id %>">View Details</a>
+            </div>
+        </div><hr class="page_hr1">
+        <!-- <div>
+            <a href="/products/<%= product._id %>/edit">Edit</a>
+            <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                <button class="">Delete</button>
+            </form>
+        </div> -->
+    <% }); %>
+</div>
+<% include ../partials/footer %>

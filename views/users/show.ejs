@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+<div>
+    <h2><%=user.first_name%> <%=user.last_name%> Dashboard</h2><hr>
+    <div>
+        <div><img class="" src="<%= user.image %>"></div>
+        <p><strong>Email: </strong><%=user.email%></p>
+        <p>Apply for jobs <a href="/careers">here</a></p>
+    </div>
+    <div>
+        <!-- Refactor and link user with application and print with for loop
+        <h3><strong>STATUS: </strong><i><b><%=user.application.status%></b></i></h3> -->
+    </div>
+</div>
+<% include ../partials/footer %>

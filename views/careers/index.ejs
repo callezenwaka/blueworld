@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+<div class="career_page">
+    <h1 class="page_text_align">Latest Jobs</h1><hr>
+    <% careers.forEach(function(career, index){ %>
+        <div class="page_content">
+            <div class="<%= index%2 === 0 ? 'page_content_index_even' : 'page_content_index_odd' %>">
+                <label><strong>Job Title: </strong></label>
+                <p><%= career.title %></p><hr class="page_hr">
+                <label><strong>Job Description: </strong></label>
+                <p><%= career.description %></p><br>
+                <!-- <label><strong>Job Requirement: </strong></label>
+                <p><%= career.requirement %></p><br>
+                <label><strong>Job Eligibility: </strong></label>
+                <p><%= career.eligibility %></p><br> -->
+                <div class="page_text_align">
+                    <a class="button" href="/careers/<%= career._id %>">View more</a>
+                    <a class="button" href="/careers/<%= career._id %>/applications/apply">Apply here</a>
+                </div>
+            </div>
+            
+            <!-- <div>
+                <a href="/careers/<%= career._id %>">View more</a>
+                <a href="/careers/<%= career._id %>/applications/apply">Apply here</a>
+            </div> -->
+        </div><hr class="page_hr1">
+    <% }); %>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,241 @@
+.main_container {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+/*************** heater styles ***************/
+.header {
+    position: relative;
+    width: 100%;
+    padding: 0 100px;
+}
+.header_fixed {
+    position: fixed;
+    width: 100%;
+}
+.header_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+.header_img_mobile {
+    margin: 0 20px 0 50px;
+    padding: 8px 16px;
+}
+.nav_menu_toggle {
+    display: none;
+}
+/***************** Nav styling *******************/
+.nav_link {
+    padding: 4px 0 0 0;
+    font-size: 1.2em
+}
+.nav_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 130px 0 400px;
+    padding: 0 35px;
+    left: 0;
+    right: 0;
+    top: 30px;
+    position: absolute;
+    font-size: 0.9em;
+}
+.nav_item {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+}
+.nav_item:first-child {
+    border-top: none;
+}
+.nav_link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4CBFFF;
+    transition: width .3s;
+    position: absolute
+}
+.nav_link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+/********* displays a bottom boarder on actve menu **********/
+.active {
+    border-bottom: 2px solid #34ADFF;
+}
+/******** displays search bar *********/
+.search_icon {
+    color: rgb(255, 255, 255);
+    margin: 10px 65px 5px 0;
+}
+.search_form_active {
+    display: block;
+    border: none;
+    border-radius: 50px;
+    width: 20%;
+    top: 8px;
+    right: 16%;
+    position: absolute;
+}
+/**************** svg styling *****************/
+.svg_card_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "svg_container";
+    max-width: 1020px;
+    margin: 0;
+    margin-top: 5px;
+}
+.svg_container {
+    grid-area: page_container;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-gap: 5px; */
+    grid-row-gap: 0;
+    grid-column-gap: 5px;
+    grid-template-areas: "svg_card" "svg_card" "svg_card" "svg_card";
+}
+.svg_card {
+    width: 100%;
+    height: auto;
+    padding: 5px; 
+    margin: 5px 5px 5px 0; 
+    text-align: center; 
+    /* background-color: #E0E0E0; */
+    box-shadow: 10px 10px 5px grey;
+}
+.svg_card:last-child {
+    margin-right: 0;
+}
+/******* Removes overlay in bigger screen **********/
+.page_overlay_active {
+    display: none;
+}
+.page_form_input {
+    width: 100%;
+    height: 40px;
+    font-size: 1em;
+    padding-left: 8px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #34ADFF;
+}
+.page_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.page_card_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "page_container";
+    max-width: 1020px;
+    margin: 0;
+    margin-top: 5px;
+}
+.page_container {
+    grid-area: page_container;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    grid-template-areas: "page_card" "page_card" "page_card" "page_card";
+}
+.page_card {
+    width: 100%;
+    height: auto;
+    padding: 5px; 
+    margin: 5px 5px 5px 0; 
+    text-align: center; 
+    background-color: #E0E0E0;
+    box-shadow: 10px 10px 5px grey;
+}
+.page_card:last-child {
+    margin-right: 0;
+}
+.page_card > img {
+    width: 100%;
+}
+.page_to_the_top {
+    right: 60px;
+}
+/**************** about page styling *****************/
+.about_page_content {
+    display: flex; flex-direction: row;
+}
+.about_page_content_details {
+    width: 60%;
+    padding: 0 10px;
+}
+.about_page_content_img {
+    width: 40%;
+}
+/********************** Contact page Styling ****************************/
+.contact_page_contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+.contact_page_form {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+/********************** Footer Styling ****************************/
+.footer_main{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(140deg, #013A6B 35%, #004E95 35%);
+  }
+  .footer_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.footer_main_content_company, .footer_main_content_support, .footer_main_content_connect {
+    display: block;
+}
+.footer_main_content_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #EFEEEF;
+}
+.footer_toggle_ {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.footer_item {
+    border-bottom: none;
+}
+.footer_link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4CBFFF;
+    transition: width .3s;
+    position: inherit
+}
+.footer_link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.footer_content_heading {
+    margin: 0 auto;
+}
+.footer_subscribe {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    line-height: 1.5em;
+    width: 60%;
+}
+.footer_item > hr.page_hr{
+    display: block;
+}

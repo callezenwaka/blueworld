@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<div class="page_create">
+    <h2><%=user.first_name%> <%=user.last_name%> Dashboard</h2><hr>
+    <div>
+        <div><img class="" src="<%= user.image %>"></div>
+        <p><strong>Email: </strong><%=user.email%></p>
+        <p><strong>User Status: </strong><%=user.status%></p>
+        <div>
+            <% users.applications.forEach(function(userapplication){ %>
+                <p><strong>STATUS: </strong><i><b><%=userapplication.career.title%></b></i></p>
+            <% }); %>
+        </div>
+    </div>
+    <div>
+        <a href="/admin/users/<%= user._id %>/edit">Edit</a>
+            <form action="/admin/users/<%= user._id %>?_method=DELETE" method="POST">
+                <button class="">Delete</button>
+            </form>
+    </div>
+</div>
+<% include ../partials/footer %>

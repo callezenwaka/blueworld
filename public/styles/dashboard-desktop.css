@@ -1,0 +1,98 @@
+/********Default params********/
+.header_fixed {
+    position: absolute;
+    width: 100%;
+}
+.header_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header_menu_bar_search_icon {
+    display: flex;
+    flex-direction: row;
+}
+/*******Toggle search bar*********/
+.search_form {
+    display: none;
+}
+.search_form_active {
+    display: block;
+    border: 1px solid #34ADFF;
+    border-radius: 50px;
+    width: 100%;
+    background-color: #34ADFF;
+    position: absolute;
+    z-index: 100;
+}
+.search_form_input {
+    border: 1px solid #34ADFF;
+    border-radius: 50px;
+    width: 100%;
+    padding-left: 5px;
+}
+.search_icon {
+    color: rgb(255, 255, 255);
+    margin: 20px 10px 5px 0;
+}
+/********Toggle nav menu**********/
+.nav_slide_out {
+    display: block;
+    min-height: 100%;
+    width: 25%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(330deg, #013A6B 35%, #004E95 35%);
+}
+.nav_item {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgb(56, 49, 161);
+}
+.nav_item:hover .nav_link:hover {
+  background-color: #4CBFFF;
+}
+/* To be fixed */
+.nav_item_active { 
+    background-color: #34ADFF;
+}
+.nav_link {
+    text-decoration: none;
+    color: #EFEEEF;
+    text-align-last: center;
+    display: block;
+    padding: 8px 0;
+}
+/*Toggle open and close button*/
+.nav_menu_toggle {
+    display: none;
+}
+.hero_desc_font_style {
+    font-family: 'Kaushan Script', 'cursive';
+    text-shadow: 4px 4px 4px rgba(51, 51, 51, 0.5);
+}
+/********** Page content styling ***************/
+.page_text_align {
+    text-align: center;
+    padding-top: 10px;
+}
+.page_link {
+    cursor: pointer;
+    color: #EFEEEF;
+    text-decoration: none;
+}
+.page_main_content {
+    width: 75%;
+    /* padding: 8px; */
+}
+.page_container {
+    display: flex;
+    flex-direction: row;
+}

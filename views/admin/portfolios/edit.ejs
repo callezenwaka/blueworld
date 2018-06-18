@@ -1,0 +1,49 @@
+<% include ../partials/header %>
+<div class="page_create">
+    <div class="page_content">
+        <h1 class="page_text_align">Management Team</h1>
+        <div class="row"></div>
+        <form action="/admin/portfolios/<%=portfolio._id%>?_method=PUT" method="post" novalidate="novalidate">
+            <div class="col-sm-6">
+                <div class="form-field">
+                    <label for="first_name">First Name <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="portfolio[first_name]" value="<%=portfolio.first_name%>" placeholder="Enter your First name" class="page_form_input" id="first_name" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="last_name">Last Name <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="portfolio[last_name]" value="<%=portfolio.last_name%>" placeholder="Enter your last name" class="page_form_input" id="last_name" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="email">Email  <span class="page_form_input_required">*</span></label>
+                    <input type="email" name="portfolio[email]" value="<%=portfolio.email%>" placeholder="Enter your email" class="page_form_input" id="email" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="phone_number">Phone Number <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="portfolio[phone_number]" value="<%=portfolio.phone_number%>" placeholder="Enter your Phone number" class="page_form_input" id="phone_number" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="position">Position <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="portfolio[position]" value="<%=portfolio.position%>" placeholder="Enter your position" class="page_form_input" id="position" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="image">Image: <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="portfolio[image]" value="/images/hero.jpeg" class="page_form_input" id="image" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="profile">Profile:  <span class="page_form_input_required">*</span></label>
+                    <textarea name="portfolio[profile]" placeholder="Enter your profile" cols="40" rows="10" class="page_form_input" id="profile" aria-required="true" aria-invalid="false"><%=portfolio.profile%></textarea>
+                </div>
+                <div class="">
+                    <button>Update Portfolio</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<% include ../partials/footer %>
