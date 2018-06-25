@@ -33,14 +33,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin: 0 130px 0 400px; */
-    /* margin: 0 5% 0 25%;
-    padding: 0 10px; */
-    margin: 0 auto;
-    max-width: 960px;
-    padding-left: 25%;
-    left: 0;
-    right: 0;
+    margin: 0;
+    padding: 0;
+    left: 30%;
+    right: 12.4%;
     top: 30px;
     position: absolute;
     font-size: 0.9em;
@@ -91,55 +87,6 @@
 .hero_section {
     margin-left: auto;
     margin-right: auto;
-}
-/**************** carousel section styling *****************/
-.section_carousel_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "carousel_container product_carousel_container";
-    width: 100%;
-    margin: 0;
-}
-.carousel_desktop_view {
-    width: 960px;
-    margin: 0 auto;
-}
-.carousel_container {
-    grid-area: carousel_container;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 5px;
-    margin: 0;
-    background-color: #FFFFFF;
-    z-index: -2;
-    grid-template-areas: "slide_container";
-}
-.product_carousel_container {
-    grid-area: product_carousel_container;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 5px;
-    margin: 0;
-    background-color: #FFFFFF;
-    z-index: -2;
-    grid-template-areas: "product_container";
-}
-.carousel_card {
-    width: 100%;
-    height: auto;
-    padding: 5px; 
-    margin: 5px 5px 5px 0; 
-    text-align: center; 
-    background-color: #FFFFFF;
-    box-shadow: 10px 10px 5px grey;
-}
-/* .carousel_card:last-child {
-    margin-right: 0;
-} */
-.carousel_card > img {
-    width: 100%;
 }
 /**************** process section styling *****************/
 .section_process_container {
@@ -212,10 +159,10 @@
     display: none;
 }
 .page_desktop_view {
-    width: 960px;
+    width: 1020px;
     margin: 0 auto;
 }
-/******* page input form styling **********/
+/******* page input form styling **********/    
 .page_form_input {
     width: 100%;
     height: 40px;
@@ -230,7 +177,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}.page_list_item {
+}
+.page_list_item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -280,7 +228,6 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 8px 0;
-    width: 960px;
 }
 .footer_main_content_company, .footer_main_content_support, .footer_main_content_connect {
     display: block;

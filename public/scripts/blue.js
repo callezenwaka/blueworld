@@ -1,6 +1,6 @@
 //Open and closes the menu icon in mobile mode
 const nav_menu_toggle = document.querySelector('#nav_menu_toggle');
-nav_menu_toggle.addEventListener('touchend',() => {
+nav_menu_toggle.addEventListener('click',() => {
     const nav_menu = document.querySelector('#nav_menu');
     const search_form_active = document.querySelector('.search_form_active');
     const page_overlay = document.querySelector('#page_overlay');

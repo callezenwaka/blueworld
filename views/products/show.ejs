@@ -1,8 +1,10 @@
 <% include ../partials/header %>
-<div class="product_page">
-    <h1 class="page_text_align"><%=product.name%></h1><hr>
-    <div><img class="thumbnail" src="<%= product.image %>"></div>
-    <div>
+<div class="page_content page_list_item page_desktop_view">
+    <div class="page_list_items_image_container">
+        <img class="page_list_items_image" src="<%= product.image %>">
+    </div>
+    <div class="page_list_items_details">
+        <p class=""><%=product.name%></p><hr>
         <p><strong>Price: </strong>$ <%=product.price%> / Carton</p>
         <p><strong>Description: </strong><%=product.description%></p>
     </div>

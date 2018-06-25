@@ -1,40 +1,37 @@
 <% include ../partials/header %>
-<div class="page_create">
-    <div class="page_content">
-        <h1 class="page_text_align">Site Users</h1>
-        <div class="row"></div>
-            <form action="/users" method="POST" novalidate="novalidate">
-                <div class="col-sm-6">
-                    <div class="form-field">
-                        <label for="first_name">First Name: <span class="page_form_input_required">*</span></label>
-                        <input type="text" name="user[first_name]" value="" placeholder="Enter your first name" class="page_form_input" id="first_name" aria-required="true" aria-invalid="false" autofocus />
-                    </div>
-                    <br>
-                    <div class="form-field">
-                        <label for="last_name">Last Name: <span class="page_form_input_required">*</span></label>
-                        <input type="text" name="user[last_name]" value="" placeholder="Enter your last Name" class="page_form_input" id="last_name" aria-required="true" aria-invalid="false" />
-                    </div>
-                    <br>
-                    <div class="form-field">
-                        <label for="email">Email: <span class="page_form_input_required">*</span></label>
-                        <input type="email" name="user[email]" value="" placeholder="Enter your email" class="page_form_input" id="email" aria-required="true" aria-invalid="false" />
-                    </div>
-                    <br>
-                    <div class="form-field">
-                        <label for="password">Password: <span class="page_form_input_required">*</span></label>
-                        <input type="text" name="user[password]" value="" placeholder="Enter your password" class="page_form_input" id="password" aria-required="true" aria-invalid="false" />
-                    </div>
-                    <br>
-                    <div class="form-field">
-                        <label for="image">Image: <span class="page_form_input_required">*</span></label>
-                        <input type="text" name="user[image]" value="/images/hero.jpeg" placeholder="Enter job image" class="page_form_input" id="image" aria-required="true" aria-invalid="false" />
-                    </div>
-                    <br>
-                    <div class="">
-                        <button>Sign Up</button>
-                    </div>
-                </div>
-            </form>
-    </div>
+<div class="page_content">
+    <h1 class="page_text_align">Sign up</h1>
+    <form action="/users" method="POST" novalidate="novalidate">
+        <div class="col-sm-6">
+            <div class="form-field">
+                <label for="first_name">First Name: <span class="page_form_input_required">*</span></label>
+                <input type="text" name="user[first_name]" value="" placeholder="Enter your first name" class="page_form_input" id="first_name" aria-required="true" aria-invalid="false" autofocus />
+            </div>
+            <br>
+            <div class="form-field">
+                <label for="last_name">Last Name: <span class="page_form_input_required">*</span></label>
+                <input type="text" name="user[last_name]" value="" placeholder="Enter your last Name" class="page_form_input" id="last_name" aria-required="true" aria-invalid="false" />
+            </div>
+            <br>
+            <div class="form-field">
+                <label for="email">Email: <span class="page_form_input_required">*</span></label>
+                <input type="email" name="user[email]" value="" placeholder="Enter your email" class="page_form_input" id="email" aria-required="true" aria-invalid="false" />
+            </div>
+            <br>
+            <div class="form-field">
+                <label for="password">Password: <span class="page_form_input_required">*</span></label>
+                <input type="text" name="user[password]" value="" placeholder="Enter your password" class="page_form_input" id="password" aria-required="true" aria-invalid="false" />
+            </div>
+            <br>
+            <div class="form-field">
+                <label for="image">Image: <span class="page_form_input_required">*</span></label>
+                <input type="text" name="user[image]" value="/images/hero.jpeg" placeholder="Enter job image" class="page_form_input" id="image" aria-required="true" aria-invalid="false" />
+            </div>
+            <br>
+            <div class="wrap">
+                <button class="button">Sign Up</button>
+            </div>
+        </div>
+    </form>
 </div>
 <% include ../partials/footer %>

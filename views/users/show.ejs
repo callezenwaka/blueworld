@@ -1,6 +1,8 @@
 <% include ../partials/header %>
-<div>
-    <h2><%=user.first_name%> <%=user.last_name%> Dashboard</h2><hr>
+<div class="page_content">
+    <div>
+        <h2><%=user.first_name%> <%=user.last_name%> Dashboard</h2><hr class="page_hr">
+    </div>
     <div>
         <div><img class="" src="<%= user.image %>"></div>
         <p><strong>Email: </strong><%=user.email%></p>

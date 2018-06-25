@@ -1,16 +1,17 @@
 <% include ../partials/header %>
-<div class="portfolio_page desktop_view">
+<div class="page_content page_desktop_view">
     <h1 class="page_text_align">Management Team</h1><hr class="page_hr">
     <% portfolios.forEach(function(portfolio){ %>
-            <div class="page_list" style="background-color: #E0E0E0;border-radius: 10px;">
-                <div class="thumbnail_container">
-                    <img class="thumbnail" src="<%= portfolio.image %>">
+            <div class="page_list">
+                <div class="page_list_items_image_container">
+                    <img class="page_list_items_image" src="<%= portfolio.image %>">
                 </div>
-                <div class="thumbnail_container">
+                <div class="page_list_items_details">
                     <h3><strong><%=portfolio.first_name%> <%=portfolio.last_name%></strong>, <%=portfolio.position%></h3><hr>
                     <p><strong>Email: </strong><%=portfolio.email%></p>
                     <p><strong>Phone Number: </strong><%=portfolio.phone_number%></p>
-                    <p><strong>Profile: </strong><%=portfolio.profile %></p>
+                    <!-- <p><strong>Profile: </strong><%=portfolio.profile %></p> -->
+                    <a class="button" href="/portfolios/<%= portfolio._id %>">View Details</a>
                 </div>
             </div><hr class="page_hr1">
     <% }); %>

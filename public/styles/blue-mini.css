@@ -1,7 +1,11 @@
 /************* Globals **************/
 hr.page_hr{
     display: block;
-  }
+}
+.page_text_align {
+    text-align: center;
+    padding-top: 10px;
+}
 /*************** heater styles ***************/
 .header_fixed {
     position: fixed;
@@ -14,7 +18,7 @@ hr.page_hr{
 }
 .header_img_mobile {
     margin: 0 auto;
-  }
+}
 .nav_menu_toggle {
     display: none;
 }
@@ -77,41 +81,12 @@ hr.page_hr{
     right: 40px;
     position: absolute;
 }
-/**************** svg styling *****************/
-.svg_card_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "svg_container";
-    min-width: 100%;
-    margin: 0;
-}
-.svg_container {
-    grid-area: page_container;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    /* grid-gap: 5px; */
-    grid-row-gap: 0;
-    grid-column-gap: 5px;
-    margin: 0 10px;
-    grid-template-areas: "svg_card" "svg_card";
-}
-.svg_card {
-    width: 100%;
-    height: auto;
-    padding: 5px; 
-    margin: 10px 5px 10px 0; 
-    text-align: center; 
-    background-color: #E0E0E0;
-    box-shadow: 10px 10px 5px grey;
-}
-.svg_card:last-child {
-    margin-right: 0;
-}
-/******* Removes overlay in bigger screen **********/
+/**************** Page Styling ********************/
+/******* hides overlay in bigger screen **********/
 .page_overlay_active {
     display: none;
 }
+/*********** page form input field styling **********/
 .page_form_input {
     width: 100%;
     height: 40px;
@@ -120,50 +95,142 @@ hr.page_hr{
     border-radius: 5px;
     border: 1px solid #34ADFF;
 }
+/*********** page list items styling **********/
 .page_list {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.page_card_container {
+.page_list_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.page_list_items_image_container {
+    width: 100%;
+}
+.page_list_items_image {
+    /* width: 100%; */
+}
+.page_list_items_details {
+    width: 100%;
+}
+/**************** carousel section styling *****************/
+.section_carousel_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    grid-template-areas: "carousel_container product_carousel_container";
+    width: 100%;
+    margin: 0;
+  }
+  .carousel_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "page_container";
-    background-color: #E0E0E0;
-    min-width: 100%;
-    margin: 0;
-}
-.page_container {
-    grid-area: page_container;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     grid-gap: 5px;
     margin: 5px 10px;
-    grid-template-areas: "page_card" "page_card";
-}
-.page_card {
+    background-color: #FFFFFF;
+    z-index: -2;
+    grid-template-areas: "slide_container";
+  }
+  .product_carousel_container {
+    grid-area: product_carousel_container;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    margin: 5px 10px;
+    background-color: #FFFFFF;
+    z-index: -2;
+    grid-template-areas: "product_container";
+  }
+  /* .carousel_card {
     width: 100%;
     height: auto;
     padding: 5px; 
     margin: 5px 5px 5px 0; 
     text-align: center; 
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 5px grey;
+  } */
+  .carousel_card:last-child {
+    margin-right: 0;
+  }
+  .carousel_card > img {
+    width: 100%;
+  }
+/**************** process section styling *****************/
+.section_process_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "process_container";
+    background-color: #E0E0E0;
+    width: 100%;
+    margin: 0;
+}
+.process_container {
+    grid-area: process_container;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin: 5px 10px;
+    grid-template-areas: "process_card" "process_card";
+}
+.process_card {
+    width: 100%;
+    height: auto;
+    padding: 5px; 
+    margin: 5px 5px 5px 0; 
+    text-align: center; 
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 5px grey;
+}
+.process_card:last-child {
+    margin-right: 0;
+}
+.process_card > img {
+    width: 100%;
+}
+/**************** values section styling *****************/
+.section_values_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "values_container";
+    background-color: #FFFFFF;
+    color: #002848;
+    width: 100%;
+    margin: 0;
+}
+.values_container {
+    grid-area: values_container;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 0;
+    grid-column-gap: 5px;
+    margin: 0 10px;
+    grid-template-areas: "value_card" "value_card";
+}
+.value_card {
+    width: 100%;
+    height: auto;
+    padding: 5px; 
+    margin: 10px 5px 10px 0; 
+    text-align: center; 
     background-color: #E0E0E0;
     box-shadow: 10px 10px 5px grey;
 }
-.page_card:last-child {
+.value_card:last-child {
     margin-right: 0;
 }
-.page_card > img {
-    width: 100%;
-}
-.thumbnail_container {
-    width: 50%;
-    padding: 10px
-}
+.my_values {display:block;}
 /**************** about page styling *****************/
 .about_page_content {
-    display: flex; flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 .about_page_content_details {
     width: 60%;
@@ -171,12 +238,18 @@ hr.page_hr{
 }
 .about_page_content_img {
     width: 40%;
+    height: 40%;
 }
 /********************** Contact page Styling ****************************/
 .contact_page_contents {
     display: flex;
     flex-direction: row;
     justify-content: space-around
+}
+.contact_page_form {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
 }
 /***************** product***********************/
 .product_content_heading {
@@ -203,10 +276,8 @@ hr.page_hr{
     justify-content: space-between;
     color: #EFEEEF;
 }
-.footer_toggle_ {
+.footer_toggle {
     display: none;
-    font-size: 1.5em;
-    cursor: pointer;
 }
 .footer_item {
     border-bottom: none;

@@ -1,9 +1,10 @@
 <% include ../partials/header %>
-<div>
-    <h1><%=portfolio.position%></h1><hr>
-    <div><img class="" src="<%= portfolio.image %>"></div>
-    <h3><strong><%=portfolio.first_name%> <%=portfolio.last_name%></strong></h3><hr>
-    <div>
+<div class="page_content page_list_item page_desktop_view">
+    <div class="page_list_items_image_container">
+        <img class="page_list_items_image" src="<%= portfolio.image %>">
+    </div>
+    <div class="page_list_items_details">
+        <p><strong><%=portfolio.first_name%> <%=portfolio.last_name%></strong>, <%=portfolio.position%></p>
         <p><strong>Email: </strong><%=portfolio.email%></p>
         <p><strong>Phone Number: </strong><%=portfolio.phone_number%></p>
         <p><strong>Profile: </strong><%=portfolio.profile%></p>
