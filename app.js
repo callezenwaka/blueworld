@@ -29,10 +29,9 @@ const admins = require('./api/routes/admin/adminRoutes');
 
 // assign mongoose promise library and connect to database
 mongoose.Promise = global.Promise;
-//const databaseUri = process.env.MONGODB_URI_DEV || 'mongodb://localhost/blueworld';
-const databaseUri = 'mongodb+srv://blueworld-cosmetics:ZOHDQveD2scYYuUd@blueworld-a79ra.mongodb.net/blueworld?retryWrites=true';
+const URL = process.env.DATABASEURL || 'mongodb://localhost/blueworld';
 
-mongoose.connect(databaseUri)
+mongoose.connect(URL)
       .then(() => console.log(`Database connected`))
       .catch(err => console.log(`Database connection error: ${err.message}`));
 
