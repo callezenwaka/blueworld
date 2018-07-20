@@ -61,3 +61,6 @@ const page_to_the_top = document.querySelector('#page_to_the_top')
             window.scrollTo(0, 0)
         },500);
     })
+// Add copyright year dynamically to the page footer
+const d = new Date();
+document.getElementById("year").innerHTML = d.getFullYear();

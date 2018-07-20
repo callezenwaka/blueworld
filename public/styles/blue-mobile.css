@@ -98,10 +98,10 @@ header, footer{
 /******* displays search bar *********/
 .search_form_active {
   display: block;
-  border: 1px solid #34ADFF;
+  /* border: 1px solid #34ADFF; */
   border-radius: 50px;
   width: 100%;
-  background-color: #34ADFF;
+  /* background-color: #34ADFF; */
   position: absolute;
   z-index: 100;
 }
@@ -304,7 +304,7 @@ header, footer{
   margin: 5px 5px 5px 0; 
   text-align: center; 
   background-color: #FFFFFF;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 0 10px 5px grey;
 }
 .carousel_card:last-child {
   margin-right: 0;
@@ -320,6 +320,7 @@ header, footer{
   width: 100%;
   background-color: #E0E0E0;
   margin: 0;
+  padding: 15px 0;
 }
 .process_container {
   grid-area: page_container;
@@ -337,7 +338,7 @@ header, footer{
   margin: 5px 0; 
   text-align: center; 
   background-color: #FFFFFF;
-  box-shadow: 10px 10px 5px grey;
+  /* box-shadow: 0 10px 5px grey; */
 }
 .process_card:last-child {
   margin-right: 0;
@@ -353,6 +354,7 @@ header, footer{
   background-color: #FFFFFF;
   color: #002848;
   width: 100%;
+  padding: 15px 0;
 }
 .values_container {
   grid-area: page_container;
@@ -366,12 +368,12 @@ header, footer{
 }
 .value_card {
   width: 100%;
-  height: auto;
+  height: 250px;
   padding: 5px; 
   margin: 5px 0; 
   text-align: center; 
   background-color: #E0E0E0;
-  box-shadow: 10px 10px 5px grey;
+  /* box-shadow: 0 10px 5px grey; */
 }
 /* .value_card:last-child {
   margin-right: 0;
@@ -432,7 +434,7 @@ header, footer{
   line-height: 1.5em;
   width: 100%;
 }
-.footer_item > hr.page_hr{
+.footer_main_content_container> span > hr.page_hr{
   display: none;
 }
 /*********** general page styling **********/
@@ -474,18 +476,22 @@ header, footer{
   content: "";
   box-sizing: border-box;
   position: fixed;
-  top: 80%;
-  right: 5px;
+  /* top: 80%; */
+  bottom: 15px;
+  right: 15px;
   height: 60px;
   width: 60px;
   margin-top: -30px;
   margin-left: -30px;
-  padding: 17px 15px 10px 15px;
+  padding: 12px 12px 15px 17px;
   border-radius: 50%;
   border: 3px solid  rgb(49, 137, 219);
   z-index: 2;
   background-color: #013A6B;
   background-image: -webkit-linear-gradient(150deg, #013A6B 35%, #004E95 35%);
+}
+.page_to_the_top:hover { 
+  opacity: 0.5;
 }
 /*********** dsplays page to the top styling **********/
 .page_to_the_top_active {

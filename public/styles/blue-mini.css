@@ -186,7 +186,9 @@ hr.page_hr{
     margin: 5px 5px 5px 0; 
     text-align: center; 
     background-color: #FFFFFF;
-    box-shadow: 10px 10px 5px grey;
+}
+.process_card:hover {
+    box-shadow: 0 10px 5px grey;
 }
 .process_card:last-child {
     margin-right: 0;
@@ -221,7 +223,10 @@ hr.page_hr{
     margin: 10px 5px 10px 0; 
     text-align: center; 
     background-color: #E0E0E0;
-    box-shadow: 10px 10px 5px grey;
+    /* box-shadow: 0 10px 5px #E0E0E0; */
+}
+.value_card:hover {
+    box-shadow: 0 10px 5px #807979;
 }
 .value_card:last-child {
     margin-right: 0;
@@ -296,7 +301,7 @@ hr.page_hr{
     transition: width .3s;
 }
 .footer_content_heading {
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .footer_subscribe {
     margin-bottom: 5px;
@@ -304,6 +309,6 @@ hr.page_hr{
     line-height: 1.5em;
     width: 60%;
 }
-.footer_item > hr.page_hr{
+.footer_main_content_container> span > hr.page_hr{
     display: block;
 }

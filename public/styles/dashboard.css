@@ -233,6 +233,10 @@ header, footer{
     border-collapse: collapse;
     width: 100%;
 }
+/*************** Footer styling ***************/
+.footer_main_header {
+    color: #EFEEEF;
+  }
 /*********** page button styling *************/
 .button:hover {
     background: #003469;

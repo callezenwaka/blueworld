@@ -5,6 +5,7 @@
 .header {
     position: relative;
     width: 100%;
+    z-index: 2;
 }
 .header_fixed {
     position: fixed;
@@ -86,7 +87,8 @@
     top: 8px;
     right: 16%;
     position: absolute;
-}/**************** main section styling *****************/
+}
+/**************** main section styling *****************/
 /**************** hero section styling *****************/
 .hero_section {
     margin-left: auto;
@@ -112,7 +114,7 @@
     grid-gap: 5px;
     margin: 0;
     background-color: #FFFFFF;
-    z-index: -2;
+    /* z-index: -2; */
     grid-template-areas: "slide_container";
 }
 .product_carousel_container {
@@ -123,7 +125,7 @@
     grid-gap: 5px;
     margin: 0;
     background-color: #FFFFFF;
-    z-index: -2;
+    /* z-index: -2; */
     grid-template-areas: "product_container";
 }
 .carousel_card {
@@ -133,7 +135,7 @@
     margin: 5px 5px 5px 0; 
     text-align: center; 
     background-color: #FFFFFF;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 0 10px 5px grey;
 }
 /* .carousel_card:last-child {
     margin-right: 0;
@@ -166,7 +168,10 @@
     margin: 10px 5px 0 0; 
     text-align: center; 
     background-color: #FFFFFF;
-    box-shadow: 10px 10px 5px grey;
+    /* box-shadow: 0 10px 5px grey; */
+}
+.process_card:hover {
+    box-shadow: 0 10px 5px grey;
 }
 .process_card:last-child {
     margin-right: 0;
@@ -201,7 +206,10 @@
     margin: 10px 5px 10px 0; 
     text-align: center; 
     background-color: #E0E0E0;
-    box-shadow: 10px 10px 5px grey;
+    /* box-shadow: 0 10px 5px #e8e5e5; */
+}
+.value_card:hover {
+    box-shadow: 0 10px 5px #474646;
 }
 .value_card:last-child {
     margin-right: 0;
@@ -246,7 +254,7 @@
 }
 /******* page navigation to the top styling **********/
 .page_to_the_top {
-    right: 60px;
+    right: 20px;
 }
 /**************** about page styling *****************/
 .about_page_content {
@@ -311,7 +319,7 @@
     transition: width .3s;
 }
 .footer_content_heading {
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .footer_subscribe {
     margin-bottom: 5px;
@@ -319,6 +327,6 @@
     line-height: 1.5em;
     width: 60%;
 }
-.footer_item > hr.page_hr{
+.footer_main_content_container> span > hr.page_hr{
     display: block;
 }
