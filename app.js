@@ -10,26 +10,27 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
 // Routes
-const index = require('./api/routes/indexRoutes');
-const careers = require('./api/routes/careerRoutes');
-const portfolios = require('./api/routes/portfolioRoutes');
-const products = require('./api/routes/productRoutes');
-const users = require('./api/routes/userRoutes');
-const blogs = require('./api/routes/blogRoutes');
-const applications = require('./api/routes/applicationRoutes');
+const index = require('./routes/indexRoutes');
+const careers = require('./routes/careerRoutes');
+const portfolios = require('./routes/portfolioRoutes');
+const products = require('./routes/productRoutes');
+const users = require('./routes/userRoutes');
+const blogs = require('./routes/blogRoutes');
+const applications = require('./routes/applicationRoutes');
 
 // Admin Routes
-const dashboard = require('./api/routes/admin/indexRoutes');
-const adminCareers = require('./api/routes/admin/careerRoutes');
-const adminPortfolios = require('./api/routes/admin/portfolioRoutes');
-const adminProducts = require('./api/routes/admin/productRoutes');
-const adminUsers = require('./api/routes/admin/userRoutes');
-const adminApplications = require('./api/routes/admin/applicationRoutes');
-const admins = require('./api/routes/admin/adminRoutes');
+const dashboard = require('./routes/admin/indexRoutes');
+const adminCareers = require('./routes/admin/careerRoutes');
+const adminPortfolios = require('./routes/admin/portfolioRoutes');
+const adminProducts = require('./routes/admin/productRoutes');
+const adminUsers = require('./routes/admin/userRoutes');
+const adminApplications = require('./routes/admin/applicationRoutes');
+const admins = require('./routes/admin/adminRoutes');
 
 // assign mongoose promise library and connect to database
 mongoose.Promise = global.Promise;
-const URL = process.env.DATABASEURL || process.env.MONGODB_URI_DEV;
+//const URL = process.env.DATABASEURL || process.env.MONGODB_URI_DEV;
+const URL = process.env.MONGODB_URI;
 
 mongoose.connect(URL)
       .then(() => console.log(`Database connected`))

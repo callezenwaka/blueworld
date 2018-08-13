@@ -113,3 +113,4 @@ vision.addEventListener('click',() => {
     mission_content.style.display = 'none'
     vision_content.style.display = 'block'
 })
+

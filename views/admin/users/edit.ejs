@@ -3,7 +3,7 @@
     <div class="page_content">
         <h1 class="page_text_align">Edit Account</h1>
         <div class="row"></div>
-        <form action="/admin/users/<%=user._id%>?_method=PUT" method="post" novalidate="novalidate">
+        <form action="/admin/users/<%=user._id%>?_method=PUT" method="post" novalidate="novalidate" enctype="multipart/form-data">
             <div class="col-sm-6">
                 <div class="form-field">
                     <label for="status">Status:  <span class="page_form_input_required">*</span></label>

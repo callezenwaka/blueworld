@@ -115,52 +115,35 @@ hr.page_hr{
 .page_list_items_details {
     width: 100%;
 }
+/*********** hero section styling ********/
+.hero_section {
+  background-image: url("../images/hero-cover.jpg");
+}
 /**************** carousel section styling *****************/
 .section_carousel_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 5px;
-    grid-template-areas: "carousel_container product_carousel_container";
+    grid-template-areas: "carousel_container";
     width: 100%;
     margin: 0;
   }
   .carousel_container {
     display: grid;
+    grid-area: carousel_container;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 5px;
     margin: 5px 10px;
     background-color: #FFFFFF;
     z-index: -2;
-    grid-template-areas: "slide_container";
-  }
-  .product_carousel_container {
-    grid-area: product_carousel_container;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 5px;
-    margin: 5px 10px;
-    background-color: #FFFFFF;
-    z-index: -2;
-    grid-template-areas: "product_container";
-  }
-  /* .carousel_card {
-    width: 100%;
-    height: auto;
-    padding: 5px; 
-    margin: 5px 5px 5px 0; 
-    text-align: center; 
-    background-color: #FFFFFF;
-    box-shadow: 10px 10px 5px grey;
-  } */
-  .carousel_card:last-child {
-    margin-right: 0;
-  }
-  .carousel_card > img {
-    width: 100%;
-  }
+   /* grid-template-areas: "slide_container";*/
+}
+.carousel_content {
+    display: flex;
+    flex-direction: row;
+}
 /**************** process section styling *****************/
 .section_process_container {
     display: grid;

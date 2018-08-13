@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 <div class="page_content">
     <h1 class="page_text_align">Fill in the form</h1><hr class="page_hr">
-    <form action="/careers/<%=career._id%>/applications" method="post" novalidate="novalidate">
+    <form action="/careers/<%=career._id%>/applications" method="post" novalidate="novalidate" enctype="multipart/form-data">
         <div class="col-sm-6">
             <div class="form-field">
                 <label for="first_name">First Name <span class="page_form_input_required">*</span></label>
@@ -40,7 +40,7 @@
             <br>
             <div class="form-field">
                 <label for="resume">Resume <span class="page_form_input_required">*</span></label>
-                <input type="text" name="application[resume]" value="/images/hero.jpeg" class="page_form_input" id="resume" aria-invalid="false" />
+                <input type="file" name="application[image]" accept="image/*" required class="page_form_input" id="image" aria-invalid="false" />
             </div>
             <br>
             <div class="form-field">

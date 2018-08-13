@@ -1,7 +1,7 @@
 'use strict';
 const express = require("express");
 const router  = express.Router();
-const Blog = require("../models/blogs");
+const Blog = require("../../models/blogs");
 //const middleware = require("../middleware");
 
 //INDEX - show all blog profiles
@@ -41,12 +41,12 @@ router.post("/", function(req, res){
 });
 
 // SHOW - shows more info about one blog
-router.get('/:id', function(req, res){
+router.get("/:id", function(req, res){
     //find the blog with provided ID
     Blog.findById(req.params.id,function(err, blog){
         if(err || !blog){
             console.log(err);
-            //req.flash('error', 'Sorry, this blog does not exist!');
+            req.flash('error', 'Sorry, this blog does not exist!');
             return res.redirect('/blog');
         }
         //render show template with that blog
