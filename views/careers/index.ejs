@@ -1,6 +1,7 @@
 <% include ../partials/header %>
 <div class="page_content page_desktop_view">
     <h1 class="page_text_align">Latest Jobs</h1><hr class="page_hr">
+    <% if (careers.length > 0) { %>
         <% careers.forEach(function(career, index){ %>
             <div class="<%= index%2 === 0 ? 'page_content_index_even' : 'page_content_index_odd' %>">
                 <label><strong>Job Title: </strong></label>
@@ -15,5 +16,8 @@
                 </div>
             </div><hr class="page_hr1">
         <% }); %>
+    <% } else {%>
+        <h3>Empty</h3>
+    <% } %>
 </div>
 <% include ../partials/footer %>
