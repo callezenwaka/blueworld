@@ -22,7 +22,7 @@ router.get("/:id", function(req, res){
     Portfolio.findById(req.params.id, function(err, portfolio){
         if(err || !portfolio){
             console.log(err);
-            req.flash('error', 'Sorry, Portfolio does not exist!');
+            //req.flash('error', 'Sorry, Portfolio does not exist!');
             return res.redirect('/portfolios');
         }
         //render show template with that portfolio
