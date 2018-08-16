@@ -1,5 +1,4 @@
-'use strict';
-const express = require("express");
+const express = require('express');
 const router  = express.Router();
 const Portfolio = require("../models/portfolios");
 //const middleware = require("../middleware");
@@ -7,13 +6,14 @@ const Portfolio = require("../models/portfolios");
 //INDEX - show all portfolio for super portfolio
 router.get("/", function(req, res){
     // Get all portfolio from DB  
-    Portfolio.find({}, function(err, portfolios){
-        if(err){
-            console.log(err);
-        } else {
-            res.render("portfolios/index",{portfolios: portfolios, page: 'portfolios'});
-        }
-    });
+    // Portfolio.find({}, function(err, portfolios){
+    //     if(err){
+    //         console.log(err);
+    //     } else {
+    //         res.render("portfolios/index",{portfolios: portfolios, page: 'portfolios'});
+    //     }
+    // });
+    return res.send('Feeling good')
 });
 
 // SHOW - shows more info about one portfolio
