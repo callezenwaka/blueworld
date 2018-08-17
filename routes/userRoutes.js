@@ -50,10 +50,10 @@ router.get("/:id/edit", function(req, res){
 router.put("/:id", function(req, res){
     User.findByIdAndUpdate(req.params.id, {$set: req.body.user}, function(err, user){
         if(err){
-            req.flash("error", err.message);
+            //req.flash("error", err.message);
             res.redirect("back");
         } else {
-            req.flash("success","Successfully Updated!");
+            //req.flash("success","Successfully Updated!");
             res.redirect("/users/" + user._id);
         }
     });

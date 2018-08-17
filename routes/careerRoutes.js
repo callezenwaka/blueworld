@@ -6,15 +6,15 @@ const Application = require("../models/applications");
 //const middleware = require("../middleware");
 
 //INDEX - show all career profiles
-router.get("/", (req, res) => {return res.send('Feeling good')
+router.get("/", (req, res) => {
     // Get all careers from DB
-    // Career.find({}, function(err, careers){
-    //     if(err){
-    //         console.log(err);
-    //     } else {
-    //         res.render("careers/index",{careers: careers, page: 'careers'});
-    //     }
-    // });
+    Career.find({}, function(err, careers){
+        if(err){
+            console.log(err);
+        } else {
+            res.render("careers/index",{careers: careers, page: 'careers'});
+        }
+    });
 });
 
 // SHOW - shows more info about one Career

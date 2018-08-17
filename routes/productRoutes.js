@@ -5,15 +5,15 @@ const Product = require("../models/products");
 //const middleware = require("../middleware");
 
 //INDEX - show all products
-router.get("/", function(req, res){return res.send('Feeling good')
+router.get("/", function(req, res){
     // Get all product from DB
-    // Product.find({}, function(err, products){
-    //     if(err){
-    //         console.log(err);
-    //     } else {
-    //         res.render("products/index",{products: products, page: 'products'});
-    //     }
-    // });
+    Product.find({}, function(err, products){
+        if(err){
+            console.log(err);
+        } else {
+            res.render("products/index",{products: products, page: 'products'});
+        }
+    });
 });
 
 // SHOW - shows more info about one product

@@ -6,14 +6,13 @@ const Portfolio = require("../models/portfolios");
 //INDEX - show all portfolio for super portfolio
 router.get("/", function(req, res){
     // Get all portfolio from DB  
-    // Portfolio.find({}, function(err, portfolios){
-    //     if(err){
-    //         console.log(err);
-    //     } else {
-    //         res.render("portfolios/index",{portfolios: portfolios, page: 'portfolios'});
-    //     }
-    // });
-    return res.send('Feeling good')
+    Portfolio.find({}, function(err, portfolios){
+        if(err){
+            console.log(err);
+        } else {
+            res.render("portfolios/index",{portfolios: portfolios, page: 'portfolios'});
+        }
+    });
 });
 
 // SHOW - shows more info about one portfolio
