@@ -20,8 +20,8 @@ const applications = require('./routes/applicationRoutes');
 
 // assign mongoose promise library and connect to database
 mongoose.Promise = global.Promise;
-//const URL = process.env.DATABASEURL || process.env.MONGODB_URI_DEV;
-const URL = process.env.MONGODB_URI;
+const URL = process.env.DATABASEURL || process.env.MONGODB_URI_DEV;
+//const URL = process.env.MONGODB_URI;
 
 mongoose.connect(URL)
       .then(() => console.log(`Database connected`))
