@@ -9,39 +9,45 @@ const Admin = require("../../models/admins");
 
 // @get daashboard with stats
 router.get('/', (req,res) => {
-    res.render('admin/dashboard');
-    //res.send('dashboard')
-    // Promise.all([
-    //     User.find(),
-    //     Career.find(),
-    //     Application.find(),
-    //     Portfolio.find(),
-    //     Product.find(),
-    //     Admin.find()
-    //     ])
-    //     .then(results=>{
-    //         //results return an array
+    Promise.all([
+        User.find(),
+        User.count(),
+        Career.find(),
+        Career.count(),
+        Application.find(),
+        Application.count(),
+        Portfolio.find(),
+        Portfolio.count(),
+        Product.find(),
+        Product.count(),
+        Admin.find(),
+        Admin.count()
+      ])
+        .then(results=>{
+            //results return an array
       
-    //         const [users,careers,applications,portfolios,products,admins] = results;
-    //         // Assign values to local variables
-    //         //res.send('dashboard')
-    //         res.render('admin/dashboard',{
-    //             page: 'dashboard'
-    //         });
+            const [users,usersTotal,careers,careersTotal,applications,applicationsTotal,portfolios,portfoliosTotal,products,productsTotal,admins,adminsTotal] = results;
+            // Assign values to local variables
+            res.app.locals.usersTotal = usersTotal
+            res.app.locals.careersTotal = careersTotal
+            res.app.locals.applicationsTotal = applicationsTotal
+            res.app.locals.portfoliosTotal = portfoliosTotal
+            res.app.locals.productsTotal = productsTotal
+            res.app.locals.adminsTotal = adminsTotal
 
-    //         // res.render('admin/dashboard',{
-    //         //     users: users,
-    //         //     careers: careers,
-    //         //     applications: applications,
-    //         //     portfolios: portfolios,
-    //         //     products: products,
-    //         //     admins: admins,
-    //         //     page: 'dashboard'
-    //         // });
-    //     })
-    //     .catch(err=>{
-    //         console.error("Something went wrong",err);
-    //     })
+            res.render('admin/dashboard',{
+                users: users,
+                careers: careers,
+                applications: applications,
+                portfolios: portfolios,
+                products: products,
+                admins: admins,
+                page: 'dashboard'
+            });
+        })
+        .catch(err=>{
+            console.error("Something went wrong",err);
+        })
 })
 
 module.exports = router;
