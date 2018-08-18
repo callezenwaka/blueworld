@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="page_create">
+    <div class="page_content">
+        <h1 class="page_text_align">Create Product</h1><hr>
+        <div class="row"></div>
+        <form action="/admin/products" method="POST" novalidate="novalidate" enctype="multipart/form-data">
+            <div class="col-sm-6">
+                <div class="form-field">
+                    <label for="name">Name <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="product[name]" value="" placeholder="Enter product name"  class="page_form_input" id="name" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="price">Price <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="product[price]" value="" placeholder="Enter product price"  class="page_form_input" id="price" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="image">Image <span class="page_form_input_required">*</span></label>
+                    <input type="file" name="image" accept="image/*" required class="" id="image" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="description">Description  <span class="page_form_input_required">*</span></label>
+                    <textarea name="product[description]" placeholder="Enter product description" cols="40" rows="10" class="page_form_input" id="description" aria-required="true" aria-invalid="false"></textarea>
+                </div>
+                <div class="">
+                    <button>Add Product</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<% include ../partials/footer %>

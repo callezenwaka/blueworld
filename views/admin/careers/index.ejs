@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+<div class="page_create">
+    <h1 class="page_text_align">Latest Jobs</h1><hr>
+
+
+    <a class="button" href="/admin/careers/add">Add Career</a>
+    <table class="page_table">
+        <thead>
+            <tr>
+                <th class="page_border">S/N</th>
+                <th class="page_border">Title</th>
+                <!-- <th class="page_border">Posted</th> -->
+                <th class="page_border">Applicants</th>
+                <th class="page_border">Actions</th>
+            </tr>
+        </thead>
+        <% careers.forEach(function(career, index){ %>
+            <div class="caption">
+                <tbody>
+                    <tr>
+                        <td class="page_border"><%=index%></td> 
+                        <td class="page_border"><%=career.title%></td>
+                        <!-- <td class="page_border"><%= moment(career.created_date).fromNow() %></td> -->
+                        <td class="page_border"><%=career.applications.length%></td>
+                        <td class="page_border">
+                            <a class="button" href="/admin/careers/<%= career._id %>/edit">Edit</a>
+                            <a class="button" href="/admin/careers/<%= career._id %>">Details</a>
+                            <form action="/admin/careers/<%= career._id %>?_method=DELETE" method="POST">
+                                <button class="button">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </div> 
+        <% }); %>
+    </table>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,20 @@
+
+<% include ../partials/header %><div class="user_page">
+    <h1 class="page_text_align">Our Users</h1><hr>
+    <% users.forEach(function(user){ %>
+        <div class="caption">
+            <h1 class="page_text_align"><%=user.first_name%> <%=user.last_name%> Dashboard</h1><hr>
+            <div><img class="thumbnail" src="<%= user.image %>"></div>
+            <div>
+                <p><strong>Email: </strong><%= user.email %></p>
+            </div>
+        </div>
+        <div>
+            <a href="/admin/users/<%= user._id %>/edit">Edit</a>
+            <form action="/admin/users/<%= user._id %>?_method=DELETE" method="POST">
+                <button class="">Delete</button>
+            </form>
+        </div><hr>
+    <% }); %>
+</div>
+<% include ../partials/footer %>

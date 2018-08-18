@@ -18,6 +18,15 @@ const users = require('./routes/userRoutes');
 const blogs = require('./routes/blogRoutes');
 const applications = require('./routes/applicationRoutes');
 
+// Admin Routes
+const dashboard = require('./routes/admin/indexRoutes');
+const adminCareers = require('./routes/admin/careerRoutes');
+const adminPortfolios = require('./routes/admin/portfolioRoutes');
+const adminProducts = require('./routes/admin/productRoutes');
+const adminUsers = require('./routes/admin/userRoutes');
+const adminApplications = require('./routes/admin/applicationRoutes');
+const admins = require('./routes/admin/adminRoutes');
+
 // assign mongoose promise library and connect to database
 mongoose.Promise = global.Promise;
 const URL = process.env.DATABASEURL || process.env.MONGODB_URI_DEV;
@@ -54,6 +63,15 @@ app.use('/careers/:id/applications', applications);
 app.use('/portfolios', portfolios);
 app.use('/products', products);
 app.use('/blogs', blogs);
+
+// Admin Routes definitions
+app.use('/admin', dashboard);
+app.use('/admin/careers', adminCareers);
+app.use('/admin/portfolios', adminPortfolios);
+app.use('/admin/products', adminProducts);
+app.use('/admin/applications', adminApplications);
+app.use('/admin/users', adminUsers);
+app.use('/admin/admins', admins);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

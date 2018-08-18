@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="page_create">
+    
+    <h1 class="page_text_align">Our Products</h1><hr>
+    <a class="button" href="/admin/products/add">Add Product</a>
+    <table class="page_table">
+        <thead>
+            <tr>
+                <th class="page_border">S/N</th>
+                <th class="page_border">Name</th>
+                <th class="page_border">Price</th>
+                <th class="page_border">Actions</th>
+            </tr>
+        </thead>
+        <% products.forEach(function(product, index){ %>
+            <div class="caption">
+                <tbody>
+                    <tr>
+                        <td class="page_border"><%=index%></td> 
+                        <td class="page_border"><%=product.name%></td>
+                        <td class="page_border">$ <%= product.price %></td>
+                        <td class="page_border">
+                            <a class="button" href="/admin/products/<%= product._id %>/edit">Edit</a>
+                            <form action="/admin/products/<%= product._id %>?_method=DELETE" method="POST">
+                                <button class="button">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </div> 
+        <% }); %>
+    </table>
+</div>
+<% include ../partials/footer %>
