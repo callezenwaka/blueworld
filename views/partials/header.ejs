@@ -18,7 +18,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script|Libre+Baskerville:700i">
         <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5/web-fonts-with-css/css/fontawesome-all.min.css">
-        <link rel="stylesheet" type="text/css" href="/styles/carousel.css">
+        <!-- <link rel="stylesheet" type="text/css" href="/styles/carousel.css"> -->
+        <link rel="stylesheet" type="text/css" href="/styles/blueworld-slide.css">
         <link rel="stylesheet" type="text/css" href="/styles/blue-mobile.css">
         <link rel="stylesheet" type="text/css" media="screen and (min-width:690px) and (max-width: 964px)" href="/styles/blue-mini.css" />
         <link rel="stylesheet" type="text/css" media="screen and (min-width:965px)" href="/styles/blue-desktop.css" />
@@ -26,14 +27,18 @@
     <body>
         <div class="page_overlay" id="page_overlay"></div>
         <div class="page_main_content">
-            <div class="page_to_the_top" id="page_to_the_top"><a class="page_to_the_top_link" href="#"><i class="fa fa-chevron-up" style="font-size: 1.5em"></i></a></div>
+            <div class="page_to_the_top" id="page_to_the_top">
+                <a class="page_to_the_top_link" href="#">
+                    <i class="fa fa-chevron-up" style="font-size: 1.5em"></i>
+                </a>
+            </div>
             <header class="header" id="header">
                 <div class="header_menu page_desktop_view">
                     <div class="" id="">
                         <img class="header_img_mobile" src="/images/blueworld-logo-white.png" alt="Blueworld Logo">
                     </div>
                     <div class="header_menu_bar_search_icon">
-                        <div class="search_icon" id="search_icon" style="display: none"<i class="fa fa-search" style="margin-left: 3px;" aria-hidden="true"></i></div>
+                        <div class="search_icon" id="search_icon" style="display: "><i class="fa fa-search" style="margin-left: 3px;" aria-hidden="true"></i></div>
                         <div class="nav_menu_toggle" id="nav_menu_toggle">
                             <div class="nav_menu_bar1"></div>
                             <div class="nav_menu_bar2"></div>
@@ -50,10 +55,10 @@
                 <nav>
                     <ul class="nav_menu" id="nav_menu">
                         <li class="nav_item <%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>"><a class="nav_link" href="/">Home</a></li>
-                        <li class="nav_item <%= typeof page !== 'undefined' && page === 'about' ? 'active' : '' %>"><a class="nav_link" href="/about">About Us</a></li>
-                        <li class="nav_item <%= typeof page !== 'undefined' && page === 'contact' ? 'active' : '' %>"><a class="nav_link" href="/contact">Contact</a></li>
                         <li class="nav_item <%= typeof page !== 'undefined' && page === 'products' ? 'active' : '' %>"><a class="nav_link" href="/products">Products</a></li>
-                        <li class="nav_item <%= typeof page !== 'undefined' && page === 'portfolios' ? 'active' : '' %>"><a class="nav_link" href="/portfolios">Management</a></li>
+                        <!-- <li class="nav_item <%= typeof page !== 'undefined' && page === 'about' ? 'active' : '' %>"><a class="nav_link" href="/about">About Us</a></li> -->
+                        <li class="nav_item <%= typeof page !== 'undefined' && page === 'contact' ? 'active' : '' %>"><a class="nav_link" href="/contact">Contact</a></li>
+                        <!-- <li class="nav_item <%= typeof page !== 'undefined' && page === 'portfolios' ? 'active' : '' %>"><a class="nav_link" href="/portfolios">Management</a></li> -->
                         <li class="nav_item <%= typeof page !== 'undefined' && page === 'careers' ? 'active' : '' %>"><a class="nav_link" href="/careers">Careers</a></li>
                         <!-- <li class="nav_item"><a class="nav_link" href="/login">Log In</a></li>
                         <li class="nav_item"><a class="nav_link" href="/register">Sign Up</a></li> -->

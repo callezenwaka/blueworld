@@ -46,7 +46,12 @@ hr.page_hr1:before {
 }
 /******* HEADER SECTION STYLING **********/
 /******* header section background **********/
-header, footer{
+header {
+  background-color:#002848;
+  min-height: 40px;
+  z-index: 1;
+}
+footer{
   background-color:#002848;
   min-height: 40px;
   /*z-index: 1;*/
@@ -188,6 +193,7 @@ header, footer{
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
+  height: 400px;
   padding: 0;
   margin: 0;
 }
