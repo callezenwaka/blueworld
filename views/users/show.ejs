@@ -1,16 +1,20 @@
 <% include ../partials/header %>
-<div class="page_content">
-    <div>
-        <h2><%=user.first_name%> <%=user.last_name%> Dashboard</h2><hr class="page_hr">
-    </div>
-    <div>
-        <div><img class="" src="<%= user.image %>"></div>
-        <p><strong>Email: </strong><%=user.email%></p>
-        <p>Apply for jobs <a href="/careers">here</a></p>
-    </div>
-    <div>
-        <!-- Refactor and link user with application and print with for loop
-        <h3><strong>STATUS: </strong><i><b><%=user.application.status%></b></i></h3> -->
+<div class="main_container">
+    <div class="page_content">
+        <div>
+            <h2><%=user.first_name%> <%=user.last_name%> Dashboard</h2><hr class="page_hr">
+        </div>
+        <div>
+            <div><img class="" src="<%= user.image %>"></div>
+            <p><strong>Email: </strong><%=user.email%></p>
+            <p>Apply for jobs <a href="/careers">here</a></p>
+        </div>
+        <div>
+            <!-- Refactor and link user with application and print with for loop
+            <h3><strong>STATUS: </strong><i><b><%=user.application.status%></b></i></h3> -->
+        </div>
     </div>
 </div>
+<% include ../partials/subscribe %> 
+<% include ../partials/main %> 
 <% include ../partials/footer %>

@@ -5,7 +5,7 @@
 .header {
     position: relative;
     width: 100%;
-    z-index: 2;
+    z-index: 200;
 }
 .header_fixed {
     position: fixed;
@@ -226,9 +226,6 @@
 .page_list_items_image_container {
     width: 100%;
 }
-.page_list_items_image {
-    /* width: 100%; */
-}
 .page_list_items_details {
     width: 100%;
 }
@@ -260,8 +257,9 @@
 }
 /********************** Footer Styling ****************************/
 .footer_main{
-    background-color: #013A6B;
-    background-image: -webkit-linear-gradient(140deg, #013A6B 35%, #004E95 35%);
+    background-color:#002848;
+    /* background-color: #013A6B; */
+    /* background-image: -webkit-linear-gradient(140deg, #013A6B 35%, #004E95 35%); */
 }
 .footer_nav {
     display: flex;
@@ -284,6 +282,16 @@
 }
 .footer_item {
     border-bottom: none;
+    border-left: 1px dotted #fff;
+    padding-left: 40px;
+    width: 30%;
+}
+.footer_item:first-child {
+   border-left: none;
+   /* padding-left: 0; */
+}
+.footer_item {
+    border-bottom: none;
 }
 .footer_link::after {
     content: '';
@@ -297,9 +305,6 @@
 .footer_link:hover::after {
     width: 100%;
     transition: width .3s;
-}
-.footer_content_heading {
-    /* margin: 0 auto; */
 }
 .footer_subscribe {
     margin-bottom: 5px;

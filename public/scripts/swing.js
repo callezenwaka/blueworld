@@ -1,3 +1,14 @@
+onload  = start;
+
+function start(){	
+var i = 1;
+function Move(){ 	
+	i = (i%4)+1; // 4 is the Number of image in slider
+	document.getElementById('i'+i).checked = true;
+}
+setInterval(Move,3000); //change img in 3 sec
+}
+
  /**
  * Tests if the element is visible (within the visible part of the page)
  * It's enough that the top or bottom edge of the element are visible

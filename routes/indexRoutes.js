@@ -3,7 +3,7 @@ const router = express.Router();
 const Product = require("../models/products");
 
 router.get('/', (req,res) => {
-    res.render('blueworld',{page: 'blueworld'});
+    res.render('blueworld',{page: 'home'});
 })
 
 router.get('/about', (req,res) => {

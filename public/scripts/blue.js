@@ -47,6 +47,7 @@ window.addEventListener('touchend', function(event) {
         page_overlay.classList.toggle("page_overlay_active");
     }
 });
+
 // Display a 'TOP' button in full screen mode document.documentElement.scrollHeight
 window.addEventListener('scroll', () => {
     const header = document.querySelector('#header');
@@ -57,7 +58,7 @@ window.addEventListener('scroll', () => {
     if (window.pageYOffset > 350) {
         header.classList.add('header_fixed');
         page_to_the_top.classList.add('page_to_the_top_active');
-    }  else {
+    }  else { 
         header.classList.remove('header_fixed');
         page_to_the_top.classList.remove('page_to_the_top_active')
         page_overlay.classList.remove("page_overlay_active");
@@ -83,20 +84,44 @@ const footer_main_connect_toggle = document.querySelector('.footer_main_connect_
 const footer_main_content_company = document.querySelector('.footer_main_content_company');
 const footer_main_content_support = document.querySelector('.footer_main_content_support');
 const footer_main_content_connect = document.querySelector('.footer_main_content_connect');
+const footer_menu_item_company_minus = document.querySelector('.company_minus');
+const footer_menu_item_company_plus = document.querySelector('.company_plus');
+const footer_menu_item_support_minus = document.querySelector('.support_minus');
+const footer_menu_item_support_plus = document.querySelector('.support_plus');
+const footer_menu_item_connect_minus = document.querySelector('.connect_minus');
+const footer_menu_item_connect_plus = document.querySelector('.connect_plus');
 footer_main_company_toggle.addEventListener('click',() => {
     footer_main_content_company.classList.toggle('footer_main_content_show')
     footer_main_content_support.classList.remove('footer_main_content_show')
     footer_main_content_connect.classList.remove('footer_main_content_show')
+    footer_menu_item_company_minus.classList.toggle('minus_show')
+    footer_menu_item_company_plus.classList.toggle('plus_hide')
+    footer_menu_item_support_minus.classList.remove('minus_show')
+    footer_menu_item_support_plus.classList.remove('plus_hide')
+    footer_menu_item_connect_minus.classList.remove('minus_show')
+    footer_menu_item_connect_plus.classList.remove('plus_hide')
 })
 footer_main_support_toggle.addEventListener('click',() => {
     footer_main_content_support.classList.toggle('footer_main_content_show')
     footer_main_content_company.classList.remove('footer_main_content_show')
     footer_main_content_connect.classList.remove('footer_main_content_show')
+    footer_menu_item_support_minus.classList.toggle('minus_show')
+    footer_menu_item_support_plus.classList.toggle('plus_hide')
+    footer_menu_item_company_minus.classList.remove('minus_show')
+    footer_menu_item_company_plus.classList.remove('plus_hide')
+    footer_menu_item_connect_minus.classList.remove('minus_show')
+    footer_menu_item_connect_plus.classList.remove('plus_hide')
 })
 footer_main_connect_toggle.addEventListener('click',() => {
     footer_main_content_connect.classList.toggle('footer_main_content_show')
     footer_main_content_company.classList.remove('footer_main_content_show')
     footer_main_content_support.classList.remove('footer_main_content_show')
+    footer_menu_item_connect_minus.classList.toggle('minus_show')
+    footer_menu_item_connect_plus.classList.toggle('plus_hide')
+    footer_menu_item_company_minus.classList.remove('minus_show')
+    footer_menu_item_company_plus.classList.remove('plus_hide')
+    footer_menu_item_support_minus.classList.remove('minus_show')
+    footer_menu_item_support_plus.classList.remove('plus_hide')
 })
 // Toggles the mission and vision content
 const mission = document.querySelector('#mission')

@@ -1,53 +1,126 @@
 <% include ./partials/header %>
-<section class="hero_section spinner_3 page_desktop_view">
-    <div class="hero_content">
-        <h3 class="hero_desc_h3 hero_desc_font_style">Redefine and Restore your </h3>
-        <h1 class="hero_desc_h1 hero_desc_font_style">Beauty &amp;<br>Confidence</h1>
+<div class="main_container">
+    <div class="container">
+        <input type="radio" id="i1" name="images" checked/>
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images"  />
+        <div class="slide_img" id="one">		
+            <img src="/images/pic.png">
+            <label class="prev" for="i4"><span></span></label>
+            <label class="next" for="i2"><span></span></label>	
+        </div>
+        <div class="slide_img" id="two">
+            <img src="/images/pic.png">
+            <label class="prev" for="i1"><span></span></label>
+            <label class="next" for="i3"><span></span></label>
+        </div>   
+        <div class="slide_img" id="three">
+            <img src="/images/pic.png">	
+            <label class="prev" for="i2"><span></span></label>
+            <label class="next" for="i4"><span></span></label>
+        </div>    
+        <div class="slide_img" id="four">
+            <img src="/images/pic.png">	
+            <label class="prev" for="i3"><span></span></label>
+            <label class="next" for="i1"><span></span></label>
+        </div>
+        <div id="nav_slide">
+            <label for="i1" class="dots" id="dot1"></label>
+            <label for="i2" class="dots" id="dot2"></label>
+            <label for="i3" class="dots" id="dot3"></label>
+            <label for="i4" class="dots" id="dot4"></label>
+        </div>
     </div>
-</section>
-<section class="page_desktop_view">
-    <div class="">
-        <h3 class="">Hot Deals</h3>
-    	<div class="page_list">
-            <div class="page_list_items_image_container">
-                <img class="page_list_items_image" src="./images/families/perfect-clinic.jpg" style="border-radius: 30%;">
-            </div>
-            <div class="page_list_items_details">
-                <p class="" style="margin-top: 30px;">A. Blueworld cosmetics Limited was founded in Lagos, Nigeria and incorporated with Corporate Affairs Commission in 2014 with a mission to empower, enrich and excite our customers with outstanding customer care and service excellence. We provide customized services to meet individual needs and we structure our business to create a pleasant and rewarding business experience for our partners and customers.</p>
-            </div>
-        </div><hr class="">
-        <div class="page_list" style="display: flex; flexx-direction: row; ">
-            <div class="page_list_items_image_container" style="order: 2;">
-                <img class="page_list_items_image" src="./images/families/good-mama.jpg" style="border-radius: 30%;">
-            </div>
-            <div class="page_list_items_details" style="order: 1;">
-                <p class="">B. Blueworld cosmetics Limited was founded in Lagos, Nigeria and incorporated with Corporate Affairs Commission in 2014 with a mission to empower, enrich and excite our customers with outstanding customer care and service excellence. We provide customized services to meet individual needs and we structure our business to create a pleasant and rewarding business experience for our partners and customers.</p>
-            </div>
-        </div><hr class="">
-        <div class="page_list">
-            <div class="page_list_items_image_container">
-                <img class="page_list_items_image" src="./images/families/funbeaut-A.jpg" style="border-radius: 30%;">
-            </div>
-            <div class="page_list_items_details">
-                <p class="">C. Blueworld cosmetics Limited was founded in Lagos, Nigeria and incorporated with Corporate Affairs Commission in 2014 with a mission to empower, enrich and excite our customers with outstanding customer care and service excellence. We provide customized services to meet individual needs and we structure our business to create a pleasant and rewarding business experience for our partners and customers.</p>
-            </div>
-        </div><hr class="">
-        <div class="page_list" style="display: flex; flexx-direction: row; ">
-            <div class="page_list_items_image_container" style="order: 2;">
-                <img class="page_list_items_image" src="./images/families/dermalis.jpg" style="border-radius: 30%;">
-            </div>
-            <div class="page_list_items_details" style="order: 1;">
-                <p class="">D. Blueworld cosmetics Limited was founded in Lagos, Nigeria and incorporated with Corporate Affairs Commission in 2014 with a mission to empower, enrich and excite our customers with outstanding customer care and service excellence. We provide customized services to meet individual needs and we structure our business to create a pleasant and rewarding business experience for our partners and customers.</p>
-            </div>
-        </div><hr class="">
-        <div class="page_list">
-            <div class="page_list_items_image_container">
-                <img class="page_list_items_image" src="./images/families/citrovate.jpg" style="border-radius: 30%;">
-            </div>
-            <div class="page_list_items_details">
-                <p class="">E. Blueworld cosmetics Limited was founded in Lagos, Nigeria and incorporated with Corporate Affairs Commission in 2014 with a mission to empower, enrich and excite our customers with outstanding customer care and service excellence. We provide customized services to meet individual needs and we structure our business to create a pleasant and rewarding business experience for our partners and customers.</p>
+    <div>
+        <h2 class="" style="text-align: center; margin: 20px 10px 10px 10px">What's new</h2><hr class="page_hr">
+        <div>
+            <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
+                <div style="position:relative; margin: 15px auto;">
+                    <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
+                    <h3 class="blink"><span>NEW!</span></h3>
+                    <h4>Sensitive Skin Beauty Bar</h4>
+                    <h3>★★★★★</h3>
+                    <button> + quick view</button>
+                </div>
+                <div style="position:relative; margin: 15px auto;">
+                    <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
+                    <h3 class="blink"><span>NEW!</span></h3>
+                    <h4>Sensitive Skin Beauty Bar</h4>
+                    <h3>★★★★★</h3>
+                    <button> + quick view</button>
+                </div>
+                <div style="position:relative; margin: 15px auto;">
+                        <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
+                    <h3 class="blink"><span>NEW!</span></h3>
+                    <h4>White Beauty Bar</h4>
+                    <h3>★★★★★</h3>
+                    <button> + quick view</button>
+                </div>
             </div>
         </div>
     </div>
-</section>
+    <!-- <i class="fa show fa-plus"></i> -->
+    <div>
+        <h2 class="" style="text-align: center; margin: 20px 10px 10px 10px">Explore our Beauty Bar products</h2><hr class="page_hr">
+        <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>Sensitive Skin Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>White Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>Sensitive Skin Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>White Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>Sensitive Skin Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>White Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>Sensitive Skin Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="margin: 15px auto;">
+                <img src="/images/image.jpeg" alt="">
+                <h4>White Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
+            <button class="button" style="align-items: center; margin: 20px auto">+ See all</button>
+        </div>
+    </div>
+</div>
+<!-- <figure>
+    <img src="/images/placeholder.svg" data-src="/images/Dove/New.jpg" width="320" height="320">
+</figure> -->
+<% include ./partials/subscribe %> 
+<% include ./partials/main %> 
 <% include ./partials/footer %> 

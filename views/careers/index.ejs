@@ -1,23 +1,27 @@
 <% include ../partials/header %>
-<div class="page_content page_desktop_view">
-    <h1 class="page_text_align">Latest Jobs</h1><hr class="page_hr">
-    <% if (careers.length > 0) { %>
-        <% careers.forEach(function(career, index){ %>
-            <div class="<%= index%2 === 0 ? 'page_content_index_even' : 'page_content_index_odd' %>">
-                <label><strong>Job Title: </strong></label>
-                <p><%= career.title %></p><hr class="page_hr">
-                <label><strong>Job Description: </strong></label>
-                <p><%= career.description %></p><br>
-                <div class="page_text_align">
-                    <a class="button" href="/careers/<%= career._id %>">View more</a>
-                    <% if (career.status == 'approved') { %>
-                        <a class="button" href="/careers/<%= career._id %>/applications/apply">Apply here</a>
-                    <% } %>
-                </div>
-            </div><hr class="page_hr1">
-        <% }); %>
-    <% } else {%>
-        <h3>Empty</h3>
-    <% } %>
+<div class="main_container">
+    <div class="page_content page_desktop_view">
+        <h1 class="page_text_align">Latest Jobs</h1><hr class="page_hr">
+        <% if (careers.length > 0) { %>
+            <% careers.forEach(function(career, index){ %>
+                <div class="<%= index%2 === 0 ? 'page_content_index_even' : 'page_content_index_odd' %>">
+                    <label><strong>Job Title: </strong></label>
+                    <p><%= career.title %></p><hr class="page_hr">
+                    <label><strong>Job Description: </strong></label>
+                    <p><%= career.description %></p><br>
+                    <div class="page_text_align">
+                        <a class="button" href="/careers/<%= career._id %>">View more</a>
+                        <% if (career.status == 'approved') { %>
+                            <a class="button" href="/careers/<%= career._id %>/applications/apply">Apply here</a>
+                        <% } %>
+                    </div>
+                </div><hr class="page_hr1">
+            <% }); %>
+        <% } else {%>
+            <h3>Empty</h3>
+        <% } %>
+    </div>
 </div>
+<% include ../partials/subscribe %> 
+<% include ../partials/main %> 
 <% include ../partials/footer %>

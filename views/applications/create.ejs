@@ -1,56 +1,60 @@
 <% include ../partials/header %>
-<div class="page_content">
-    <h1 class="page_text_align">Fill in the form</h1><hr class="page_hr">
-    <form action="/careers/<%=career._id%>/applications" method="post" novalidate="novalidate" enctype="multipart/form-data">
-        <div class="col-sm-6">
-            <div class="form-field">
-                <label for="first_name">First Name <span class="page_form_input_required">*</span></label>
-                <input type="text" name="application[first_name]" value="" placeholder="Enter your First name" class="page_form_input" id="first_name" autofocus aria-required="true" aria-invalid="false" />
+<div class="main_container">
+    <div class="page_content">
+        <h1 class="page_text_align">Fill in the form</h1><hr class="page_hr">
+        <form action="/careers/<%=career._id%>/applications" method="post" novalidate="novalidate" enctype="multipart/form-data">
+            <div class="col-sm-6">
+                <div class="form-field">
+                    <label for="first_name">First Name <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="application[first_name]" value="" placeholder="Enter your First name" class="page_form_input" id="first_name" autofocus aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="last_name">Last Name <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="application[last_name]" value="" placeholder="Enter your Last name" class="page_form_input" id="last_name" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="email">Email  <span class="page_form_input_required">*</span></label>
+                    <input type="email" name="application[email]" value="" placeholder="Enter your email" class="page_form_input" id="email" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="phone_number">Phone Number <span class="page_form_input_required">*</span></label>
+                    <input type="tel" name="application[phone_number]" value="" placeholder="Enter your phone number" class="page_form_input" id="phone_number" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="course">Course <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="application[course]" value="" placeholder="Enter your course" class="page_form_input" id="course" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="school">School  <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="application[school]" value="" placeholder="Enter your school" class="page_form_input" id="school" aria-required="true" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="state">State <span class="page_form_input_required">*</span></label>
+                    <input type="text" name="application[state]" value="" placeholder="Enter your state" class="page_form_input" id="state" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="resume">Resume <span class="page_form_input_required">*</span></label>
+                    <input type="file" name="image" accept="image/*" required class="page_form_input" id="image" aria-invalid="false" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="profile">Profile  <span class="page_form_input_required">*</span></label>
+                    <textarea name="application[profile]" placeholder="Enter your profile here" cols="40" rows="10" class="page_form_textarea" id="profile" aria-required="true" aria-invalid="false"></textarea>
+                </div>
+                <div class="wrap">
+                    <button class="button">Submit Application</button>
+                </div>
             </div>
-            <br>
-            <div class="form-field">
-                <label for="last_name">Last Name <span class="page_form_input_required">*</span></label>
-                <input type="text" name="application[last_name]" value="" placeholder="Enter your Last name" class="page_form_input" id="last_name" aria-required="true" aria-invalid="false" />
-            </div>
-            <br>
-            <div class="form-field">
-                <label for="email">Email  <span class="page_form_input_required">*</span></label>
-                <input type="email" name="application[email]" value="" placeholder="Enter your email" class="page_form_input" id="email" aria-required="true" aria-invalid="false" />
-            </div>
-            <br>
-            <div class="form-field">
-                <label for="phone_number">Phone Number <span class="page_form_input_required">*</span></label>
-                <input type="tel" name="application[phone_number]" value="" placeholder="Enter your phone number" class="page_form_input" id="phone_number" aria-invalid="false" />
-            </div>
-            <br>
-            <div class="form-field">
-                <label for="course">Course <span class="page_form_input_required">*</span></label>
-                <input type="text" name="application[course]" value="" placeholder="Enter your course" class="page_form_input" id="course" aria-invalid="false" />
-            </div>
-            <br>
-            <div class="form-field">
-                <label for="school">School  <span class="page_form_input_required">*</span></label>
-                <input type="text" name="application[school]" value="" placeholder="Enter your school" class="page_form_input" id="school" aria-required="true" aria-invalid="false" />
-            </div>
-            <br>
-            <div class="form-field">
-                <label for="state">State <span class="page_form_input_required">*</span></label>
-                <input type="text" name="application[state]" value="" placeholder="Enter your state" class="page_form_input" id="state" aria-invalid="false" />
-            </div>
-            <br>
-            <div class="form-field">
-                <label for="resume">Resume <span class="page_form_input_required">*</span></label>
-                <input type="file" name="image" accept="image/*" required class="page_form_input" id="image" aria-invalid="false" />
-            </div>
-            <br>
-            <div class="form-field">
-                <label for="profile">Profile  <span class="page_form_input_required">*</span></label>
-                <textarea name="application[profile]" placeholder="Enter your profile here" cols="40" rows="10" class="page_form_textarea" id="profile" aria-required="true" aria-invalid="false"></textarea>
-            </div>
-            <div class="wrap">
-                <button class="button">Submit Application</button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
+<% include ../partials/subscribe %> 
+<% include ../partials/main %> 
 <% include ../partials/footer %>
