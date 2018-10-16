@@ -32,10 +32,10 @@ search_icon.addEventListener('click',() => {
 //     search_form.classList.toggle('search_form_active');
 // })
 // Removes the hero spinner after 300msec
-setTimeout( () => {
-    const hero_section = document.querySelector('.hero_section');
-    hero_section.classList.remove('spinner_3');
-},300);
+// setTimeout( () => {
+//     const hero_section = document.querySelector('.hero_section');
+//     hero_section.classList.remove('spinner_3');
+// },300);
 // Toggles an overlay on the screen in mobile mode
 window.addEventListener('touchend', function(event) {
     const nav_menu_toggle = document.querySelector('#nav_menu_toggle');
@@ -123,19 +123,19 @@ footer_main_connect_toggle.addEventListener('click',() => {
     footer_menu_item_support_minus.classList.remove('minus_show')
     footer_menu_item_support_plus.classList.remove('plus_hide')
 })
-// Toggles the mission and vision content
-const mission = document.querySelector('#mission')
-const vision = document.querySelector('#vision')
-mission.addEventListener('click',() => {
-    const mission_content = document.querySelector('.mission_content')
-    const vision_content = document.querySelector('.vision_content')
-    mission_content.style.display = 'block'
-    vision_content.style.display = 'none'
-})
-vision.addEventListener('click',() => {
-    const mission_content = document.querySelector('.mission_content')
-    const vision_content = document.querySelector('.vision_content')
-    mission_content.style.display = 'none'
-    vision_content.style.display = 'block'
-})
+// // Toggles the mission and vision content
+// const mission = document.querySelector('#mission')
+// const vision = document.querySelector('#vision')
+// mission.addEventListener('click',() => {
+//     const mission_content = document.querySelector('.mission_content')
+//     const vision_content = document.querySelector('.vision_content')
+//     mission_content.style.display = 'block'
+//     vision_content.style.display = 'none'
+// })
+// vision.addEventListener('click',() => {
+//     const mission_content = document.querySelector('.mission_content')
+//     const vision_content = document.querySelector('.vision_content')
+//     mission_content.style.display = 'none'
+//     vision_content.style.display = 'block'
+// })
 
