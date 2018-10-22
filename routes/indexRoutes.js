@@ -2,16 +2,20 @@ const express = require('express');
 const router = express.Router();
 const Product = require("../models/products");
 
+// router.get('/', (req,res) => {
+//     Product.find({}, function(err, products){
+//         if(err){
+//             console.log(err);
+//         } else {
+//             res.render('blueworld',{products: products,page: 'home'});
+//             // res.render("products/index",{products: products, page: 'products'});
+//         }
+//     });
+//     // res.render('blueworld',{page: 'home'});
+// })
+
 router.get('/', (req,res) => {
-    Product.find({}, function(err, products){
-        if(err){
-            console.log(err);
-        } else {
-            res.render('blueworld',{products: products,page: 'home'});
-            // res.render("products/index",{products: products, page: 'products'});
-        }
-    });
-    // res.render('blueworld',{page: 'home'});
+    res.render('blueworld',{page: 'home'});
 })
 
 router.get('/about', (req,res) => {

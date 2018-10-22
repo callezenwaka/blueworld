@@ -56,7 +56,7 @@ hr.page_hr1:before {
 header {
   background-color:#002848;
   min-height: 40px;
-  z-index: 1;
+  z-index: 2;
 }
 footer{
   background-color:#002848;
@@ -259,6 +259,9 @@ footer{
 .footer_item:last-child {
   border-bottom: none;
 }
+.footer_page_link:hover, .footer_social_medial_color:hover {
+  color: #807979;
+}
 .footer_link {
   padding: 6px 0;
 }
@@ -272,6 +275,9 @@ footer{
 }
 .subscribe_form {
   text-align: center
+}
+.subscribe_container {
+  margin: 15px 0;
 }
 .subscribe_header {
   color: #FFFFFF;
@@ -353,7 +359,7 @@ footer{
   /* background-image: -webkit-linear-gradient(150deg, #013A6B 35%, #004E95 35%); */
 }
 .page_to_the_top:hover { 
-  /* opacity: 0.5; */
+  background: #807979;
   border: 3px solid  #004E95;
 }
 /*********** dsplays page to the top styling **********/
@@ -519,5 +525,61 @@ footer{
   /* height: 100px; */
   bottom: 0;
 }
-
-
+.prod_page {
+  display: block;
+  /* position: absolute; */
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding:0;
+  left:0;
+  right:0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.95);
+  z-index: 1;
+}
+.prod_menu {
+  display: block;
+  background-color: rgba(0,0,0,0.95);
+  /* flex-direction: column; */
+  /* position: absolute; */
+  /* margin: 60px 0; */
+}
+.prod_list {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 20px 0;
+}
+.prod_drop {
+  display: none;
+}
+.prod_drop_show {
+  display: block;
+}
+.prod_drop_show>.prod_item:hover {
+  background: #8c8b8b;
+}
+.prod_link {
+  display: block;
+  color: #f1e2e2;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.prod_page {
+  background-image: url("../images/mobile-hero-cover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+.prod_soaps_up, .prod_conditioners_up, .prod_shampoos_up, .prod_hair_creams_up, .prod_lotions_up, .prod_body_cream_up, .prod_down_hide {
+  display: none;
+}
+.prod_up_show {
+  display: inherit;
+}

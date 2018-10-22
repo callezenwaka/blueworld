@@ -7,6 +7,10 @@ const ProductSchema = new Schema({
     type: String,
     required: 'Kindly enter the name of the product'
   },
+  category: {
+    type: String,
+    required: 'Kindly enter the category of the product'
+  },
   description: {
     type: String,
     required: 'Kindly enter the description of the product'

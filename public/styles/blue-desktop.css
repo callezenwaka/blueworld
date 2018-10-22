@@ -280,6 +280,11 @@
 .footer_toggle {
     display: none;
 }
+.footer_page_link {
+    cursor: pointer;
+    color: #EFEEEF;
+    text-decoration: none;
+}
 .footer_item {
     border-bottom: none;
     border-left: 1px dotted #fff;
@@ -293,7 +298,7 @@
 .footer_item {
     border-bottom: none;
 }
-.footer_link::after {
+/* .footer_link::after {
     content: '';
     display: block;
     width: 0;
@@ -305,10 +310,9 @@
 .footer_link:hover::after {
     width: 100%;
     transition: width .3s;
-}
+} */
 .footer_subscribe {
     margin-bottom: 5px;
-    border-radius: 5px;
     line-height: 1.5em;
     width: 60%;
 }

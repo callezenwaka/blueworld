@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+<div>
+    <h2 class="" style="text-align: center; margin: 20px 10px 10px 10px; text-transform: uppercase;"><%= category %></h2><hr class="page_hr">
+    <div>
+        <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
+            <% products.forEach(function(product){ %>
+                <div style="position:relative; margin: 15px auto;">
+                    <img src="<%= product.image %>"  alt="" width="320" height="320">
+                    <h3 class="blink"><span>NEW!</span></h3>
+                    <h4>Sensitive Skin Beauty Bar</h4>
+                    <h3>★★★★★</h3>
+                    <button> + quick view</button>
+                </div>
+            <% }); %>
+            <div style="position:relative; margin: 15px auto;">
+                <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
+                <h3 class="blink"><span>NEW!</span></h3>
+                <h4>Sensitive Skin Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="position:relative; margin: 15px auto;">
+                <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
+                <h3 class="blink"><span>NEW!</span></h3>
+                <h4>Sensitive Skin Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+            <div style="position:relative; margin: 15px auto;">
+                    <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
+                <h3 class="blink"><span>NEW!</span></h3>
+                <h4>White Beauty Bar</h4>
+                <h3>★★★★★</h3>
+                <button> + quick view</button>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../partials/subscribe %> 
+<% include ../partials/main %> 
+<% include ../partials/footer %>

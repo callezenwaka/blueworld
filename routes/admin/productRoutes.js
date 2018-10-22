@@ -116,6 +116,7 @@ router.put("/:id",  upload.single('image'), function(req, res){
                 }
             }
             product.name = req.body.product.name;
+            product.category = req.body.product.category;
             product.description = req.body.product.description;
             product.price = req.body.product.price;
             console.log(product)

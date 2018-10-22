@@ -1,3 +1,4 @@
+* { box-sizing: border-box }
 /************* Globals **************/
 hr.page_hr{
     display: block;
@@ -28,7 +29,7 @@ hr.page_hr{
 /***************** Nav styling *******************/
 .nav_link {
     padding: 4px 0 0 0;
-    font-size: 0.9em
+    font-size: 1em
 }
 .nav_menu {
     display: flex;
@@ -40,7 +41,7 @@ hr.page_hr{
     right: 0;
     top: 30px;
     position: absolute;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 .nav_item {
     list-style-type: none;
@@ -271,6 +272,11 @@ hr.page_hr{
 .footer_toggle {
     display: none;
 }
+.footer_page_link {
+    cursor: pointer;
+    color: #EFEEEF;
+    text-decoration: none;
+}
 .footer_item {
     border-bottom: none;
     border-left: 1px dotted #fff;
@@ -281,7 +287,7 @@ hr.page_hr{
    border-left: none;
    /* padding-left: 0; */
 }
-.footer_link::after {
+/* .footer_link::after {
     content: '';
     display: block;
     width: 0;
@@ -293,7 +299,7 @@ hr.page_hr{
 .footer_link:hover::after {
     width: 100%;
     transition: width .3s;
-}
+} */
 /* .footer_content_heading {
     margin: 0 auto; 
 } */
