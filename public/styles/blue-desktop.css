@@ -1,4 +1,8 @@
+.page_main_content {
+    /* font-size: 1.3em; */
+}
 .main_container {
+    max-width: 1200px;
     margin: 0 auto;
 }
 /*************** heater styles ***************/
@@ -34,14 +38,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin: 0 130px 0 400px; */
-    /* margin: 0 5% 0 25%;
-    padding: 0 10px; */
     margin: 0 auto;
-    max-width: 960px;
-    padding-left: 25%;
+    max-width: 900px;
+    padding-left: 15%;
     left: 0;
-    right: 0;
+    right: 50px;
     top: 30px;
     position: absolute;
     font-size: 0.9em;
@@ -77,7 +78,7 @@
 /******** displays search bar *********/
 .search_icon {
     color: rgb(255, 255, 255);
-    margin: 10px 0 0 0;
+    margin: 35px 0 0 0;
 }
 .search_form_active {
     display: block;
@@ -200,7 +201,7 @@
     display: none;
 }
 .page_desktop_view {
-    width: 960px;
+    width: 1200px;
     margin: 0 auto;
 }
 /******* page input form styling **********/
@@ -315,7 +316,15 @@
     margin-bottom: 5px;
     line-height: 1.5em;
     width: 60%;
+    font-size: 1.3em;
 }
 .footer_main_content_container> span > hr.page_hr{
     display: block;
+}
+.subscribe_header {
+    font-size: 1.7em;
+}
+.subscribe_form {
+    max-width: 70%;
+    margin: 10px auto;
 }

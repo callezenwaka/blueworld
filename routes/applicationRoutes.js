@@ -14,16 +14,17 @@ const storage = multer.diskStorage({
   }
 });
 const imageFilter = function (req, file, cb) {
-    // accept image files only
-    if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/i)) {
-        return cb(new Error('Only image files are allowed!'), false);
+    // accept pdf files only
+    if (!file.originalname.match(/\.(pdf)$/i)) {
+        return cb(new Error('Only pdf files are allowed!'), false);
     }
     cb(null, true);
 };
 const upload = multer({ storage: storage, fileFilter: imageFilter})
 
 cloudinary.config({ 
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  upload_preset: process.env.CLOUDINARY_UPLOAD_PRSET,
   api_key: process.env.CLOUDINARY_API_KEY, 
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
@@ -45,20 +46,20 @@ router.get("/apply", function(req, res){
 });
 
 //Send application deails to DB
-router.post("/", upload.single('image'), function(req, res){
+router.post("/", upload.single('resume'), function(req, res){
   // get data from form and add to careers array
   Career.findById(req.params.id, function(err, career){
         if(err){
             console.log(err);
             res.redirect("/career");
         } else {
-            cloudinary.v2.uploader.upload(req.file.path, function(err, result) {
+            cloudinary.v2.uploader.upload(req.file.path,{ format: 'jpg' }, function(err, result) {
                 if(err) {
                   //req.flash('error', err.message);
                   return res.redirect('back');
                 }
                 // add cloudinary url for the image to the application object under image property
-                req.body.application.image = result.secure_url;
+                req.body.application.image = result.secure_url + '.' + 'jpg';
                 // add image's public_id to application object
                 req.body.application.imageId = result.public_id;
                 // get data from form and save to DB
@@ -77,7 +78,7 @@ router.post("/", upload.single('image'), function(req, res){
                         application.save();
                         career.applications.push(application);
                         career.save();
-                        console.log(application);
+                        // console.log(application);
                         //req.flash('success', 'Application created Successfully!!');
                         res.redirect('/careers/' + career._id);
                     }

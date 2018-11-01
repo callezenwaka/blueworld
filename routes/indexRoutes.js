@@ -25,5 +25,8 @@ router.get('/about', (req,res) => {
 router.get('/contact', (req,res) => {
     res.render("contact", {page: 'contact'});
 })
+router.get('/score', (req,res) => {
+    res.render("score", {page: 'score'});
+})
 
 module.exports = router;

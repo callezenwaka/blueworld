@@ -70,6 +70,7 @@ footer{
   width: 100%;
   top: 0;transition-timing-function: ease;
   transition: all 0.3s ease-in-out;
+  z-index: 100;
 }
 /******* displays logo, search icon and hamburger menu icon **********/
 .header_menu {
@@ -259,6 +260,11 @@ footer{
 .footer_item:last-child {
   border-bottom: none;
 }
+.footer_page_link {
+  cursor: pointer;
+  color: #EFEEEF;
+  text-decoration: none;
+}
 .footer_page_link:hover, .footer_social_medial_color:hover {
   color: #807979;
 }
@@ -269,12 +275,12 @@ footer{
   color: #EFEEEF;
 }
 .subscribe {
-  padding: 10px 0;
+  padding: 30px 0;
   background: #004782;
   /* background-image: -webkit-linear-gradient(140deg, #003765 35%, #004782 35%) */
 }
 .subscribe_form {
-  text-align: center
+  text-align: center;
 }
 .subscribe_container {
   margin: 15px 0;
@@ -283,9 +289,15 @@ footer{
   color: #FFFFFF;
   text-align: center;
   margin: 0 0 30px 0;
+  /* border-bottom: 2px solid #EFEEEF; */
+}
+.subscribe_underline {
+  text-decoration: none;
+  border-bottom: 2px solid #EFEEEF;
 }
 .footer_subscribe {
-  margin-bottom: 5px;
+  margin: 0 5px 5px 0;
+  padding: 0 5px;
   line-height: 1.5em;
   width: 65%;
   color: #fff;
@@ -424,6 +436,9 @@ footer{
   cursor: pointer;
 }
 /********* Contact page styling  *********/
+.contact_page_item {
+  margin: 15px;
+}
 .contact_page_link {
   cursor: pointer;
   color: #000000;

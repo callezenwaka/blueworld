@@ -305,9 +305,13 @@ hr.page_hr{
 } */
 .footer_subscribe {
     margin-bottom: 5px;
-    /* border-radius: 5px; */
+    margin: 0 5px 5px 0;
+    padding: 0 5px;
     line-height: 1.5em;
     width: 60%;
+    line-height: 1.5em;
+    width: 60%;    
+    font-size: 1.3em;
 }
 .footer_main_content_container> span > hr.page_hr{
     display: block;
