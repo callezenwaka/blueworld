@@ -7,9 +7,9 @@ hr.page_hr{
     text-align: center;
     padding-top: 10px;
 }
-.show:hover {
+/* .show:hover {
     transform: rotate(45deg);
-}
+} */
 /*************** heater styles ***************/
 .header_fixed {
     position: fixed;
@@ -77,18 +77,18 @@ hr.page_hr{
     margin: 10px 20px 5px 0;
 }
 .search_form_active {
-    display: block;
+    /* display: block;
     border: none;
     border-radius: 50px;
     width: 40%;
     top: 8px;
     right: 40px;
-    position: absolute;
+    position: absolute; */
 }
 /**************** Page Styling ********************/
 /******* hides overlay in bigger screen **********/
 .page_overlay_active {
-    display: none;
+    /* display: none; */
 }
 /*********** page form input field styling **********/
 .page_form_input {

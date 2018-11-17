@@ -1,6 +1,6 @@
-.page_main_content {
-    /* font-size: 1.3em; */
-}
+/* .page_main_content {
+    font-size: 1.3em;
+} */
 .main_container {
     max-width: 1200px;
     margin: 0 auto;
@@ -81,13 +81,13 @@
     margin: 35px 0 0 0;
 }
 .search_form_active {
-    display: block;
+    /* display: block;
     border: none;
     border-radius: 50px;
     width: 20%;
     top: 8px;
     right: 16%;
-    position: absolute;
+    position: absolute; */
 }
 /**************** main section styling *****************/
 /**************** hero section styling *****************/
@@ -267,7 +267,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 8px 0;
-    width: 960px;
+    width: 1200px;
 }
 .footer_main_content_company, .footer_main_content_support, .footer_main_content_connect {
     display: block;

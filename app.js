@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const nodemailer = require('nodemailer');
 const favicon = require('serve-favicon');
 const cors = require('cors')
 const morgan = require('morgan');

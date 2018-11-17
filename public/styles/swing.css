@@ -37,7 +37,8 @@ body, html {
   position: absolute;
   top: 0;
   background-color: rgba(255, 82, 82, 0.2);
-  z-index: 99;
+  /* z-index: 99; */
+  z-index: 9;
   transition: .45s;
   cursor: pointer;
   text-align: center;
@@ -74,7 +75,8 @@ body, html {
   height: 11px;
   position: absolute;
   text-align: center;
-  z-index: 50;
+  /* z-index: 50; */
+  z-index: 10;
   cursor: default;
 }
 .container #nav_slide .dots {

@@ -15,7 +15,7 @@
                 </li>
                 <li>
                     <div>
-                        <h3 title="Head Office"><i style="color: crimson" class="fa fa-map-marker"></i><strong>  BLUEWORLD COSMETICS</strong></h3>
+                        <h3 title="Head Office"><i class="fa fa-map-marker-alt"></i><strong>  BLUEWORLD COSMETICS</strong></h3>
                         <p class="contact_page_item">Ogun Plaza,</p>
                         <p class="contact_page_item">International center for commerce,</p>
                         <p class="contact_page_item">Ojo Local Government,</p>
@@ -29,7 +29,7 @@
                 <h2 class="page_text_align">Send a message</h2><hr class="page_hr">
             </div>
             <div class="row">
-                <form action="/" method="post" novalidate="novalidate">
+                <form action="/contact" method="post" novalidate="novalidate" enctype="multipart/form-data">
                     <div class="contact_page_form">
                         <div class="form-field">
                             <label for="full_name">Full Name: <span class="page_form_input_required">*</span></label>
@@ -43,7 +43,7 @@
                         <br>
                         <div class="form-field">
                             <label for="phone_number">Phone Number: <span class="page_form_input_required">*</span></label>
-                            <input type="number" name="contact[phone_number]" value="" class="page_form_input" id="phone_number" placeholder="Enter your phone number" aria-invalid="false" />
+                            <input type="tel" name="contact[phone_number]" value="" class="page_form_input" id="phone_number" placeholder="Enter your phone number" aria-invalid="false" />
                         </div>
                         <br>
                         <div class="form-field">
