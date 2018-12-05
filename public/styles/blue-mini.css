@@ -7,9 +7,6 @@ hr.page_hr{
     text-align: center;
     padding-top: 10px;
 }
-/* .show:hover {
-    transform: rotate(45deg);
-} */
 /*************** heater styles ***************/
 .header_fixed {
     position: fixed;
@@ -76,20 +73,6 @@ hr.page_hr{
     color: rgb(255, 255, 255);
     margin: 10px 20px 5px 0;
 }
-.search_form_active {
-    /* display: block;
-    border: none;
-    border-radius: 50px;
-    width: 40%;
-    top: 8px;
-    right: 40px;
-    position: absolute; */
-}
-/**************** Page Styling ********************/
-/******* hides overlay in bigger screen **********/
-.page_overlay_active {
-    /* display: none; */
-}
 /*********** page form input field styling **********/
 .page_form_input {
     width: 100%;
@@ -113,112 +96,18 @@ hr.page_hr{
 .page_list_items_image_container {
     width: 100%;
 }
-/* .page_list_items_image {
+.page__image {
     width: 100%;
-} */
+    height: 100%;
+  }
 .page_list_items_details {
     width: 100%;
+    padding-left: 10px;
 }
 /*********** hero section styling ********/
 .hero_section {
   background-image: url("../images/hero-cover.jpg");
 }
-/**************** carousel section styling *****************/
-.section_carousel_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 5px;
-    grid-template-areas: "carousel_container";
-    width: 100%;
-    margin: 0;
-  }
-  .carousel_container {
-    display: grid;
-    grid-area: carousel_container;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 5px;
-    margin: 5px 10px;
-    background-color: #FFFFFF;
-    z-index: -2;
-   /* grid-template-areas: "slide_container";*/
-}
-.carousel_content {
-    display: flex;
-    flex-direction: row;
-}
-/**************** process section styling *****************/
-.section_process_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "process_container";
-    background-color: #E0E0E0;
-    width: 100%;
-    margin: 0;
-}
-.process_container {
-    grid-area: process_container;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 5px;
-    margin: 5px 10px;
-    grid-template-areas: "process_card" "process_card";
-}
-.process_card {
-    width: 100%;
-    height: auto;
-    padding: 5px; 
-    margin: 5px 5px 5px 0; 
-    text-align: center; 
-    background-color: #FFFFFF;
-}
-.process_card:hover {
-    box-shadow: 0 10px 5px grey;
-}
-.process_card:last-child {
-    margin-right: 0;
-}
-.process_card > img {
-    width: 100%;
-}
-/**************** values section styling *****************/
-.section_values_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "values_container";
-    background-color: #FFFFFF;
-    color: #002848;
-    width: 100%;
-    margin: 0;
-}
-.values_container {
-    grid-area: values_container;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 0;
-    grid-column-gap: 5px;
-    margin: 0 10px;
-    grid-template-areas: "value_card" "value_card";
-}
-.value_card {
-    width: 100%;
-    height: auto;
-    padding: 5px; 
-    margin: 10px 5px 10px 0; 
-    text-align: center; 
-    background-color: #E0E0E0;
-    /* box-shadow: 0 10px 5px #E0E0E0; */
-}
-.value_card:hover {
-    box-shadow: 0 10px 5px #807979;
-}
-.value_card:last-child {
-    margin-right: 0;
-}
-.my_values {display:block;}
 /**************** about page styling *****************/
 .about_page_content {
     display: flex;
@@ -250,9 +139,6 @@ hr.page_hr{
 /********************** Footer Styling ****************************/
 .footer_main{
     background-color:#002848;
-    /* background-color: #013A6B; */
-    /* background-image: -webkit-linear-gradient(140deg, #013A6B 35%, #004E95 35%); */
-    /* min-height: 200px; */
 }
 .footer_nav {
     display: flex;
@@ -287,22 +173,6 @@ hr.page_hr{
    border-left: none;
    /* padding-left: 0; */
 }
-/* .footer_link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #4CBFFF;
-    transition: width .3s;
-    position: inherit
-}
-.footer_link:hover::after {
-    width: 100%;
-    transition: width .3s;
-} */
-/* .footer_content_heading {
-    margin: 0 auto; 
-} */
 .footer_subscribe {
     margin-bottom: 5px;
     margin: 0 5px 5px 0;

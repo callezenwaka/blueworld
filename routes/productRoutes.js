@@ -17,6 +17,21 @@ router.get("/", function(req, res){
     res.render("products/product",{ page: 'products'});
 });
 
+// SHOW - shows more info about one product
+router.get("/:category/:id", function(req, res){
+    const id = req.params.id
+    //find the product with provided ID
+    Product.findById(id, function(err, product){
+        if(err || !product){
+            console.log(err);
+            // req.flash('error', 'Sorry, product does not exist!');
+            return res.redirect('/product/:category');
+        }
+        //render show template with that product
+        res.render("products/show", {product: product});
+    });
+});
+
 //INDEX - show product category
 router.get("/:category", (req, res) => {
     // Get all product from DB
@@ -29,20 +44,6 @@ router.get("/:category", (req, res) => {
         }
     });
     // res.render("products/category",{page: 'Categories'});
-});
-
-// SHOW - shows more info about one product
-router.get("/:id", function(req, res){
-    //find the product with provided ID
-    Product.findById(req.params.id, function(err, product){
-        if(err || !product){
-            console.log(err);
-            req.flash('error', 'Sorry, product does not exist!');
-            return res.redirect('/product/index');
-        }
-        //render show template with that product
-        res.render("products/show", {product: product});
-    });
 });
 
 module.exports = router;

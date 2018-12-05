@@ -5,11 +5,11 @@
         <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
             <% products.forEach(function(product){ %>
                 <div style="position:relative; margin: 15px auto;">
-                    <img src="<%= product.image %>"  alt="" width="320" height="320">
+                    <img src="<%= product.image %>"  alt="<%= product.name %>" width="320" height="320">
                     <h3 class="blink"><span>NEW!</span></h3>
-                    <h4>Sensitive Skin Beauty Bar</h4>
+                    <h4><%= product.name %></h4>
                     <h3>★★★★★</h3>
-                    <button> + quick view</button>
+                    <a class="button" href="/products/<%= product.category %>/<%= product._id %>">View Details</a>
                 </div>
             <% }); %>
             <div style="position:relative; margin: 15px auto;">

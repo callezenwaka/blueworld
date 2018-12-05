@@ -177,29 +177,37 @@ header, footer{
 }
 .page_to_the_top {
     display: none;
-    content: "Down";
+    content: "";
     box-sizing: border-box;
     position: fixed;
-    top: 80%;
-    right: 5px;
+    /* top: 80%; */
+    bottom: 15px;
+    right: 15px;
     height: 60px;
     width: 60px;
     margin-top: -30px;
     margin-left: -30px;
-    padding: 17px 15px 10px 15px;
+    padding: 12px 12px 15px 17px;
     border-radius: 50%;
-    border: 3px solid  rgb(49, 137, 219);
+    border: 3px solid  #013A6B;
+    background: #f0f0f0;
     z-index: 2;
-    background-color: #013A6B;
-    background-image: -webkit-linear-gradient(150deg, #013A6B 35%, #004E95 35%);
-}
-.page_to_the_top_active {
+    /* border: 3px solid  rgb(49, 137, 219); */
+    /* background-color: #013A6B; */
+    /* background-image: -webkit-linear-gradient(150deg, #013A6B 35%, #004E95 35%); */
+  }
+  .page_to_the_top:hover { 
+    background: #807979;
+    border: 3px solid  #004E95;
+  }
+  /*********** dsplays page to the top styling **********/
+  .page_to_the_top_active {
     display: block;
     cursor: pointer;
-}
-.page_to_the_top_link {
+  }
+  .page_to_the_top_link {
     color: #EFEEEF;
-}
+  }
 .page_form_input {
     width: 95%;
     height: 40px;

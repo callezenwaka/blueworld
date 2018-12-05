@@ -1,10 +1,15 @@
 <div class="" >
-    <div class="page_content" style="padding: 0">
-        <div class="search_form" id="search_form">
-            <form method="POST" action="/" class="search" id="search">                    
-                <input class="search_form_input" placeholder="Search Here"/>
-                <input type="hidden" name="submit">
-            </form>
+    <div class="search_form" id="search_form">
+        <div style="right: 15px; top: 80px; position: absolute">
+            <i class="fa show cancel_search fa-plus" style="color: #EFEEEF; font-size: 2em; cursor: pointer"></i>
         </div>
+        <div style="position: absolute; top: 150px; color: #EFEEEF;margin-left: 15px;">
+            <h2>Hello, what are you looking for?</h2>
+        </div>
+        <form method="GET" action="/search" class="search" id="search">  
+            <input type="text" name="search" class="search_form_input" placeholder="Search Products..." autofocus>    
+            <input type="hidden" name="submit" value="Search">
+        </form>
     </div>
 </div>
+

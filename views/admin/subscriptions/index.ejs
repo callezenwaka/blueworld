@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<div class="page_create">
+    <h1 class="page_text_align">Subscriptions</h1><hr>
+    <table class="page_table">
+        <thead>
+            <tr>
+                <th class="page_border">S/N</th>
+                <th class="page_border">Email</th>
+                <th class="page_border">Status</th>
+                <th class="page_border">Actions</th>
+            </tr>
+        </thead>
+        <% subscriptions.forEach(function(subscription, index){ %>
+            <div class="caption">
+                <tbody>
+                    <tr>
+                        <td class="page_border"><%=index + 1%></td> 
+                        <td class="page_border"><%=subscription.email%></td>
+                        <td class="page_border"><%=subscription.status%></td>
+                        <td class="page_border">
+                            <a class="button" href="/admin/subscriptions/<%= subscription._id %>/edit">Edit</a>
+                            <form action="/admin/subscriptions/<%= subscription._id %>?_method=DELETE" method="POST">
+                                <button class="button">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </div> 
+        <% }); %>
+    </table>
+</div>
+<% include ../partials/footer %>

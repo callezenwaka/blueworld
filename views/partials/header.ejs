@@ -25,20 +25,6 @@
     </head>
     <body>
         <div class="page_overlay" id="page_overlay"></div>
-        <div class="" >
-            <div class="search_form" id="search_form">
-                <div style="right: 15px; top: 80px; position: absolute">
-                    <i class="fa show cancel_search fa-plus" style="color: #EFEEEF; font-size: 2em; cursor: pointer"></i>
-                </div>
-                <div style="position: absolute; top: 150px; color: #EFEEEF;margin-left: 15px;">
-                    <h2>Hello, what are you looking for?</h2>
-                </div>
-                <form method="POST" action="/#" class="search" id="search">                    
-                    <input class="search_form_input" placeholder="Search Here"/>
-                    <input type="hidden" name="submit">
-                </form>
-            </div>
-        </div>
         <div class="page_main_content">
             <div class="page_to_the_top" id="page_to_the_top">
                 <a class="page_to_the_top_link" href="#">
@@ -59,12 +45,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="search_form" id="search_form">
-                    <form method="POST" action="/" class="search" id="search">                    
-                        <input class="search_form_input" placeholder="Search Here"/>
-                        <input type="hidden" name="submit">
-                    </form>
-                </div> -->
                 <nav>
                     <ul class="nav_menu" id="nav_menu">
                         <li class="nav_item <%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>"><a class="nav_link" href="/">Home</a></li>
@@ -80,3 +60,4 @@
                     </ul>
                 </nav>
             </header>
+            <% include search %>

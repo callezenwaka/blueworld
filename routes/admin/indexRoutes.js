@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const Subscription = require("../../models/subscriptions");
+const Contact = require("../../models/contacts");
 const Career = require("../../models/careers");
 const Application = require("../../models/applications");
 const Product = require("../../models/products");
@@ -21,12 +23,16 @@ router.get('/', (req,res) => {
         Product.find(),
         Product.count(),
         Admin.find(),
-        Admin.count()
+        Admin.count(),
+        Contact.find(),
+        Contact.count(),
+        Subscription.find(),
+        Subscription.count()
       ])
         .then(results=>{
             //results return an array
       
-            const [users,usersTotal,careers,careersTotal,applications,applicationsTotal,portfolios,portfoliosTotal,products,productsTotal,admins,adminsTotal] = results;
+            const [users,usersTotal,careers,careersTotal,applications,applicationsTotal,portfolios,portfoliosTotal,products,productsTotal,admins,adminsTotal,contacts,contactsTotal,subscriptions,subscriptionsTotal] = results;
             // Assign values to local variables
             res.app.locals.usersTotal = usersTotal
             res.app.locals.careersTotal = careersTotal
@@ -34,6 +40,8 @@ router.get('/', (req,res) => {
             res.app.locals.portfoliosTotal = portfoliosTotal
             res.app.locals.productsTotal = productsTotal
             res.app.locals.adminsTotal = adminsTotal
+            res.app.locals.contactsTotal = contactsTotal
+            res.app.locals.subscriptionsTotal = subscriptionsTotal 
 
             res.render('admin/dashboard',{
                 users: users,
@@ -42,6 +50,8 @@ router.get('/', (req,res) => {
                 portfolios: portfolios,
                 products: products,
                 admins: admins,
+                contacts: contacts,
+                subscriptions: subscriptions,
                 page: 'dashboard'
             });
         })

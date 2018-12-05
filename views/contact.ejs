@@ -28,32 +28,33 @@
             <div class="">
                 <h2 class="page_text_align">Send a message</h2><hr class="page_hr">
             </div>
+           
             <div class="row">
-                <form action="/contact" method="post" novalidate="novalidate" enctype="multipart/form-data">
+                <form action="/contact" method="POST" novalidate="novalidate" >
                     <div class="contact_page_form">
                         <div class="form-field">
                             <label for="full_name">Full Name: <span class="page_form_input_required">*</span></label>
-                            <input type="text" name="contact[full_name]" value="" class="page_form_input" id="full_name" placeholder="Enter your full name"  aria-required="true" aria-invalid="false" />
+                            <input type="text" name="contact[full_name]" value="" class="page__input" id="full_name" placeholder="Enter your full name"  aria-required="true" aria-invalid="false" />
                         </div>
                         <br>
                         <div class="form-field">
                             <label for="email">Email:  <span class="page_form_input_required">*</span></label>
-                            <input type="email" name="contact[email]" value="" class="page_form_input" id="email" placeholder="Enter your email" aria-required="true" aria-invalid="false" />
+                            <input type="email" name="contact[email]" value="" class="page__input" id="email" placeholder="Enter your email" aria-required="true" aria-invalid="false" />
                         </div>
                         <br>
                         <div class="form-field">
                             <label for="phone_number">Phone Number: <span class="page_form_input_required">*</span></label>
-                            <input type="tel" name="contact[phone_number]" value="" class="page_form_input" id="phone_number" placeholder="Enter your phone number" aria-invalid="false" />
+                            <input type="tel" name="contact[phone_number]" value="" class="page__input" id="phone_number" placeholder="Enter your phone number" aria-invalid="false" />
                         </div>
                         <br>
                         <div class="form-field">
                             <label for="title">Title: <span class="page_form_input_required">*</span></label>
-                            <input type="text" name="contact[title]" value="" class="page_form_input" id="title" placeholder="Enter the message title" aria-invalid="false" />
+                            <input type="text" name="contact[title]" value="" class="page__input" id="title" placeholder="Enter the message title" aria-invalid="false" />
                         </div>
                         <br>
                         <div class="form-field">
                             <label for="message">Message:  <span class="page_form_input_required">*</span></label>
-                            <textarea name="contact[message]" cols="40" rows="10" class="page_form_textarea" id="message" aria-required="true" aria-invalid="false"></textarea>
+                            <textarea name="contact[message]" cols="40" rows="10" class="page__textarea" id="message" aria-required="true" aria-invalid="false"></textarea>
                         </div>
                         <br>
                         <div class="wrap">

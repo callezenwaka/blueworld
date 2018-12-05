@@ -2,12 +2,12 @@
 <div class="main_container">
     <div class="page_content page_list_item page_desktop_view">
         <div class="page_list_items_image_container">
-            <img class="page_list_items_image" src="<%= product.image %>">
+            <img src="<%= product.image %>"  alt="<%= product.name %>" class="page__image">
         </div>
         <div class="page_list_items_details">
-            <p class=""><%=product.name%></p><hr>
-            <p><strong>Price: </strong>$ <%=product.price%> / Carton</p>
-            <p><strong>Description: </strong><%=product.description%></p>
+            <p class="page_text_align"><strong><%=product.name%></strong></p><hr>
+            <p><strong>Product Category: </strong><%=product.category%></p>
+            <p><strong>Description: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus similique possimus nemo nostrum alias ad voluptas impedit tempora. Quos esse consequuntur sapiente nihil ipsa vel veniam officia quisquam libero incidunt.</p>
         </div>
     </div>
 </div>

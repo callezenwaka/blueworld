@@ -12,14 +12,23 @@
                 <br>
                 <div class="form-field">
                     <label for="category">Category <span class="page_form_input_required">*</span></label>
-                    <select name="product[category]" id="category" class="page_form_input" id="name" aria-required="true" aria-invalid="false">
-                        <option value="<%= product.category %>">--</option>
+                    <select name="product[category]" id="category" class="page_form_input" aria-required="true" aria-invalid="false">
+                        <option value="<%= product.category %>"><%= product.category %></option>
                         <option value="body-creams">BODY CREAMS</option>
                         <option value="lotions">LOTIONS</option>
                         <option value="hair-creams">HAIR CREAMS</option>
                         <option value="shampoos">SHAMPOOS</option>
                         <option value="conditioners">CONDITIONERS</option>
                         <option value="soaps">SOAPS</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-field">
+                    <label for="prod">Product Life<span class="page_form_input_required">*</span></label>
+                    <select name="product[prod]" id="prod" class="page_form_input" aria-required="true" aria-invalid="false">
+                        <option value="<%= product.prod %>"><%= product.prod %></option>
+                        <option value="newProduct">NEW PRODUCT</option>
+                        <option value="oldProduct">OLD PRODUCT</option>
                     </select>
                 </div>
                 <br>

@@ -34,89 +34,52 @@
         </div>
     </div>
     <div>
-        <h2 class="" style="text-align: center; margin: 60px 10px 10px 10px">What's new</h2><hr class="page_hr">
+        <h2 class="" style="text-align: center; margin: 60px 10px 10px 10px">What's New</h2><hr class="page_hr">
         <div>
             <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
-                
-                <div style="position:relative; margin: 15px auto;">
-                    <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
-                    <h3 class="blink"><span>NEW!</span></h3>
-                    <h4>Sensitive Skin Beauty Bar</h4>
-                    <h3>★★★★★</h3>
-                    <button> + quick view</button>
-                </div>
-                <div style="position:relative; margin: 15px auto;">
-                    <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
-                    <h3 class="blink"><span>NEW!</span></h3>
-                    <h4>Sensitive Skin Beauty Bar</h4>
-                    <h3>★★★★★</h3>
-                    <button> + quick view</button>
-                </div>
-                <div style="position:relative; margin: 15px auto;">
-                        <img src="/images/Dove/New.jpg" alt="" width="320" height="320">
-                    <h3 class="blink"><span>NEW!</span></h3>
-                    <h4>White Beauty Bar</h4>
-                    <h3>★★★★★</h3>
-                    <button> + quick view</button>
-                </div>
+                <% new_products.forEach(function(new_product){ %>
+                    <div style="position:relative; margin: 15px auto;">
+                        <a class="" href="/products/<%= new_product.category %>/<%= new_product._id %>">
+                            <img src="<%= new_product.image %>"  alt="<%= new_product.name %>" width="320" height="320">
+                            <h3 class="blink"><span>NEW!</span></h3>
+                            <h4 style="color: #000000"><%= new_product.name %></h4>
+                        </a>
+                        <!-- <h3>★★★★★</h3> -->
+                        <a class="button" href="/products/<%= new_product.category %>/<%= new_product._id %>">View Details</a>
+                    </div>
+                <% }); %>
             </div>
         </div>
     </div>
     <!-- <i class="fa show fa-plus"></i> -->
     <div style="margin: 60px 0 50px 0">
-        <h2 class="" style="text-align: center; margin: 20px 10px 10px 10px">Explore our Beauty Bar products</h2><hr class="page_hr">
+        <h2 class="" style="text-align: center; margin: 20px 10px 10px 10px">Explore our Beauty Bar Products</h2><hr class="page_hr">
         <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>Sensitive Skin Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>White Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>Sensitive Skin Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>White Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>Sensitive Skin Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>White Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>Sensitive Skin Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
-            <div style="margin: 15px auto;">
-                <img src="/images/image.jpeg" alt="">
-                <h4>White Beauty Bar</h4>
-                <h3>★★★★★</h3>
-                <button> + quick view</button>
-            </div>
+            <% old_products.forEach(function(old_product){ %>
+                <div style="position:relative; margin: 15px auto;">
+                    <a class="" href="/products/<%= old_product.category %>/<%= old_product._id %>">
+                        <img src="<%= old_product.image %>"  alt="<%= old_product.name %>" width="320" height="320">
+                        <h4 style="color: #000000"><%= old_product.name %></h4>
+                    </a>
+                    <!-- <h3>★★★★★</h3> -->
+                    <a class="button" href="/products/<%= old_product.category %>/<%= old_product._id %>">View Details</a>
+                </div>
+            <% }); %>
         </div>
         <div style="display:flex; flex-wrap:wrap; justify-content: space-between; text-align: center;">
-            <button class="button" style="align-items: center; margin: 20px auto">+ See all</button>
+            <button class="button see_all" style="align-items: center; margin: 20px auto">+ See More</button>
+            <div class="products hide_all_products">
+                <% all_products.forEach(function(all_product){ %>
+                    <div style="position:relative; margin: 15px auto;">
+                        <a class="" href="/products/<%= all_product.category %>/<%= all_product._id %>">
+                            <img src="<%= all_product.image %>"  alt="<%= all_product.name %>" width="320" height="320">
+                            <h4 style="color: #000000"><%= all_product.name %></h4>
+                        </a>
+                        <!-- <h3>★★★★★</h3> -->
+                        <a class="button" href="/products/<%= all_product.category %>/<%= all_product._id %>">View Details</a>
+                    </div>
+                <% }); %>
+            </div>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@ const router  = express.Router();
 const Portfolio = require("../models/portfolios");
 //const middleware = require("../middleware");
 
-//INDEX - show all portfolio for super portfolio
+//GET - show all portfolio for super portfolio
 router.get("/", function(req, res){
     // Get all portfolio from DB  
     Portfolio.find({}, function(err, portfolios){
@@ -15,7 +15,7 @@ router.get("/", function(req, res){
     });
 });
 
-// SHOW - shows more info about one portfolio
+// GET - shows more info about one portfolio
 router.get("/:id", function(req, res){
     //find the portfolio with provided ID
     Portfolio.findById(req.params.id, function(err, portfolio){

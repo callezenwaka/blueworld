@@ -117,12 +117,13 @@ router.put("/:id",  upload.single('image'), function(req, res){
             }
             product.name = req.body.product.name;
             product.category = req.body.product.category;
+            product.prod = req.body.product.prod;
             product.description = req.body.product.description;
             product.price = req.body.product.price;
             console.log(product)
             product.save();
             //req.flash("success","Successfully Updated!");
-            res.redirect("/admin/products/" + product._id);
+            res.redirect("/admin/products");
         }
     });
 });

@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const nodemailer = require('nodemailer');
 const favicon = require('serve-favicon');
 const cors = require('cors')
 const morgan = require('morgan');
@@ -21,6 +20,8 @@ const applications = require('./routes/applicationRoutes');
 
 // Admin Routes
 const dashboard = require('./routes/admin/indexRoutes');
+const adminSubscriptions = require('./routes/admin/subscriptionRoutes');
+const adminContacts = require('./routes/admin/contactRoutes');
 const adminCareers = require('./routes/admin/careerRoutes');
 const adminPortfolios = require('./routes/admin/portfolioRoutes');
 const adminProducts = require('./routes/admin/productRoutes');
@@ -67,6 +68,8 @@ app.use('/blogs', blogs);
 
 // Admin Routes definitions
 app.use('/admin', dashboard);
+app.use('/admin/subscriptions', adminSubscriptions);
+app.use('/admin/contacts', adminContacts);
 app.use('/admin/careers', adminCareers);
 app.use('/admin/portfolios', adminPortfolios);
 app.use('/admin/products', adminProducts);
