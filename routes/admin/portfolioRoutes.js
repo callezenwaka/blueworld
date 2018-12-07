@@ -56,14 +56,12 @@ router.post("/", upload.single('image'), function(req, res){
     // add image's public_id to portfolio object
     req.body.portfolio.imageId = result.public_id;
     // get data from form and save to DB
-    console.log(req.body.portfolio)
     Portfolio.create(req.body.portfolio, function(err, portfolio){
       if(err){
           console.log(err);
       } else {
         //portfolio.save()
-        // res.redirect('/admin/portfolios/');
-        res.send('done');
+        res.redirect('/admin/portfolios/');
       }
     });
   });
@@ -132,17 +130,18 @@ router.put("/:id", upload.single('image'), function(req, res){
 
 // DELETE - removes portfolio from the database
 router.delete("/:id",function(req, res) {
-    Portfolio.findById(req.params.id , async (err, portfolio) => {
+    Portfolio.findOneAndDelete(req.params.id , async (err, portfolio) => {
       try {
         await cloudinary.v2.uploader.destroy(portfolio.imageId);
-        await portfolio.remove();
+        // await portfolio.remove();
         // req.flash('success', 'Campground deleted successfully!');
         res.redirect('back');
       } catch(err) {
         console.log(err)
+        res.redirect('/admin/portfolios');
       }
       //req.flash('error', 'Portfolios deleted!');
-      res.redirect('/admin/portfolios');
+      
         
     })
 });

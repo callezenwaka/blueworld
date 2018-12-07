@@ -120,7 +120,6 @@ router.put("/:id",  upload.single('image'), function(req, res){
             product.prod = req.body.product.prod;
             product.description = req.body.product.description;
             product.price = req.body.product.price;
-            console.log(product)
             product.save();
             //req.flash("success","Successfully Updated!");
             res.redirect("/admin/products");
@@ -130,16 +129,18 @@ router.put("/:id",  upload.single('image'), function(req, res){
 
 // DELETE - removes product from the database
 router.delete("/:id",function(req, res) {
-    Product.findById(req.params.id, async (err, product) => {
+    Product.findOneAndDelete(req.params.id, async (err, product) => {
         try {
             await cloudinary.v2.uploader.destroy(product.imageId);
-            await product.remove();
+            // product.deleteOne();
             // req.flash('success', 'Product deleted successfully!');
-            res.redirect('back');
+            res.redirect('/admin/products');
         } catch(err) {
-            console.log(err)
+            if (err) {
+                console.log(err)
+                res.redirect('back');
+            }
         }
-        res.redirect('/admin/products');
     })
 });
 

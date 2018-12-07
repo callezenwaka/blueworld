@@ -1,24 +1,34 @@
 <% include ../partials/header %>
 <div class="page_create">
+    
     <h1 class="page_text_align">Management Team</h1><hr>
-    <% portfolios.forEach(function(portfolio){ %>
-        <div class="page_content">
-            <div>
-                <div><img class="thumbnail" src="<%= portfolio.image %>"></div>
-                <h3><strong><%=portfolio.first_name%> <%=portfolio.last_name%> ~ <%=portfolio.position%></strong></h3><hr>
-                <div>
-                    <p><strong>Email: </strong><%=portfolio.email%></p>
-                    <p><strong>Phone Number: </strong><%=portfolio.phone_number%></p>
-                    <p><strong>Profile: </strong><%=portfolio.profile %></p>
-                </div>
-            </div>
-            <div>
-                <a href="/admin/portfolios/<%=portfolio._id %>/edit">Edit</a>
-                <form action="/admin/portfolios/<%=portfolio._id %>?_method=DELETE" method="POST">
-                    <button class="">Delete</button>
-                </form>
-            </div><hr>
-        </div>
-    <% }); %>
+    <a class="button" href="/admin/portfolios/add">Add Staff</a>
+    <table class="page_table">
+        <thead>
+            <tr>
+                <th class="page_border">S/N</th>
+                <th class="page_border">Image</th>
+                <th class="page_border">Name</th>
+                <th class="page_border">Actions</th>
+            </tr>
+        </thead>
+        <% portfolios.forEach(function(portfolio, index){ %>
+            <div class="caption">
+                <tbody>
+                    <tr>
+                        <td class="page_border"><%=index + 1%></td> 
+                        <td class="page_border"><img class="thumbnail" src="<%= portfolio.image %>" style="width:25%; height: 25%;"></td>
+                        <td class="page_border"><%=portfolio.first_name%> <%=portfolio.last_name%></td>
+                        <td class="page_border">
+                            <a class="button" href="/admin/portfolios/<%= portfolio._id %>/edit">Edit</a>
+                            <form action="/admin/portfolios/<%= portfolio._id %>?_method=DELETE" method="POST">
+                                <button class="button">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </div> 
+        <% }); %>
+    </table>
 </div>
 <% include ../partials/footer %>

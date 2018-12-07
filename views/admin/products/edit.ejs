@@ -48,6 +48,10 @@
                 </div>
                 <div class="">
                     <button>Update Product</button>
+                    <form action="/admin/products/<%= product._id %>?_method=DELETE" method="POST">
+                        <!-- <button class="button">Delete</button> -->
+                        <input type="submit" class="button" value="Delete">
+                    </form>
                 </div>
             </div>
         </form>
